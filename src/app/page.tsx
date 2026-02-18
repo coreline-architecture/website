@@ -1,6 +1,6 @@
 import { Navbar } from "@/components/layout/Navbar";
 import { Hero } from "@/components/blocks/Hero";
-import { MoveRight, Shield, Zap, Cpu, Globe, Lock } from "lucide-react";
+import { MoveRight, Shield, Zap, Cpu, Globe, Lock, Terminal as TerminalIcon } from "lucide-react";
 import Link from "next/link";
 
 export default function Home() {
@@ -49,6 +49,61 @@ export default function Home() {
               title="Predictable Scaling"
               description="Stateless flows and CQRS-native design make horizontal scaling trivial and safe."
             />
+          </div>
+        </div>
+      </section>
+
+      <section className="py-32 overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="flex flex-col lg:flex-row items-center gap-16">
+            <div className="lg:w-1/2">
+              <h2 className="text-4xl md:text-5xl font-bold mb-6">Crystal Clear <br /> <span className="text-primary">Logic Flow</span></h2>
+              <p className="text-muted text-lg leading-relaxed mb-8">
+                Stop guessing. Start building with a standard that defines the role of every single line of code.
+                From rules to ports, every layer is isolated and specialized.
+              </p>
+              <div className="space-y-4">
+                <div className="flex items-start gap-4 p-4 rounded-xl hover:bg-card/50 transition-colors">
+                  <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary flex-shrink-0">
+                    <TerminalIcon size={20} />
+                  </div>
+                  <div>
+                    <h4 className="font-bold mb-1">Thin Controllers</h4>
+                    <p className="text-sm text-muted">Ports only handle I/O and pass data to the Flow layer.</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4 p-4 rounded-xl hover:bg-card/50 transition-colors">
+                  <div className="w-10 h-10 rounded-lg bg-secondary/10 flex items-center justify-center text-secondary flex-shrink-0">
+                    <Zap size={20} />
+                  </div>
+                  <div>
+                    <h4 className="font-bold mb-1">Pure Business Flow</h4>
+                    <p className="text-sm text-muted">Flows contain strictly business rules, zero infrastructure logic.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="lg:w-1/2 w-full">
+              <div className="relative p-1 rounded-3xl bg-gradient-to-br from-card-border via-transparent to-card-border">
+                <div className="bg-[#0c111d] rounded-[22px] p-6 font-mono text-sm leading-relaxed overflow-hidden shadow-2xl">
+                  <div className="flex gap-2 mb-6">
+                    <div className="w-3 h-3 rounded-full bg-red-500" />
+                    <div className="w-3 h-3 rounded-full bg-yellow-500" />
+                    <div className="w-3 h-3 rounded-full bg-green-500" />
+                  </div>
+                  <pre className="text-white/80">
+                    <span className="text-blue-400">export const</span> <span className="text-yellow-400">createUserController</span> = <span className="text-yellow-400">asyncHandler</span>(<span className="text-blue-400">async</span> (req, res) <span className="text-blue-400">=&gt;</span> {"{"}<br />
+                    {"  "}<span className="text-blue-400">const</span> input = <span className="text-green-400">CreateUserRule</span>.<span className="text-yellow-400">parse</span>(req.body);<br />
+                    {"  "}<span className="text-blue-400">const</span> user = <span className="text-blue-400">await</span> <span className="text-green-400">createUserFlow</span>.<span className="text-yellow-400">execute</span>(input);<br />
+                    {"  "}<span className="text-blue-400">return</span> <span className="text-yellow-400">success</span>(res, <span className="text-yellow-400">toUserResponse</span>(user), <span className="text-orange-400">"User created"</span>);<br />
+                    {"}"});
+                  </pre>
+                </div>
+                <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-primary/20 rounded-full blur-3xl" />
+                <div className="absolute -top-6 -left-6 w-32 h-32 bg-secondary/20 rounded-full blur-3xl" />
+              </div>
+            </div>
           </div>
         </div>
       </section>
