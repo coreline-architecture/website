@@ -3,9 +3,7 @@
 import { DocLayout } from "@/components/layout/DocLayout";
 import { motion } from "framer-motion";
 
-/* ============================================================
-   ICONS
-   ============================================================ */
+
 const IconArrowRight = () => (
     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <path d="M5 12h14M12 5l7 7-7 7" />
@@ -18,9 +16,7 @@ const IconArrowLeft = () => (
     </svg>
 );
 
-/* ============================================================
-   DATA
-   ============================================================ */
+
 const solidPrinciples = [
     { letter: "S", title: "Single Responsibility", detail: "Every layer has exactly one job (Port, Flow, Source)." },
     { letter: "O", title: "Open/Closed", detail: "Add features by creating new Flows, not modifying existing logic." },
@@ -38,7 +34,7 @@ const dryItems = [
 export default function StandardsPage() {
     return (
         <DocLayout>
-            {/* Header */}
+
             <div style={{ marginBottom: "48px" }}>
                 <motion.div
                     initial={{ opacity: 0, y: 16 }}
@@ -78,14 +74,14 @@ export default function StandardsPage() {
                 </motion.div>
             </div>
 
-            {/* Content */}
+
             <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.15 }}
                 style={{ display: "flex", flexDirection: "column", gap: "48px" }}
             >
-                {/* SOLID Principles */}
+
                 <div>
                     <div style={{ display: "flex", alignItems: "center", gap: "12px", marginBottom: "10px" }}>
                         <div style={{
@@ -159,7 +155,7 @@ export default function StandardsPage() {
                     </div>
                 </div>
 
-                {/* DRY */}
+
                 <div>
                     <div style={{
                         height: "1px",
@@ -208,7 +204,7 @@ export default function StandardsPage() {
                     </div>
                 </div>
 
-                {/* 12-Factor */}
+
                 <div>
                     <div style={{
                         height: "1px",
@@ -257,7 +253,7 @@ export default function StandardsPage() {
                     </div>
                 </div>
 
-                {/* Footer navigation */}
+
                 <div style={{
                     marginTop: "16px",
                     paddingTop: "24px",

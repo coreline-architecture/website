@@ -3,9 +3,7 @@
 import { DocLayout } from "@/components/layout/DocLayout";
 import { motion } from "framer-motion";
 
-/* ============================================================
-   ICONS
-   ============================================================ */
+
 const IconArrowRight = () => (
     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <path d="M5 12h14M12 5l7 7-7 7" />
@@ -15,7 +13,7 @@ const IconArrowRight = () => (
 export default function DocsPage() {
     return (
         <DocLayout>
-            {/* Header */}
+
             <div style={{ marginBottom: "48px" }}>
                 <motion.div
                     initial={{ opacity: 0, y: 16 }}
@@ -55,7 +53,7 @@ export default function DocsPage() {
                 </motion.div>
             </div>
 
-            {/* Content */}
+
             <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -67,7 +65,7 @@ export default function DocsPage() {
                     strict backend architecture standard designed to control complexity as applications grow.
                 </p>
 
-                {/* Quote block */}
+
                 <div style={{
                     padding: "20px 24px",
                     borderRadius: "10px",
@@ -87,7 +85,7 @@ export default function DocsPage() {
                     how data must flow through the system.
                 </p>
 
-                {/* Section: The Core Concept */}
+
                 <div style={{ marginTop: "16px" }}>
                     <div style={{
                         height: "1px",
@@ -109,7 +107,7 @@ export default function DocsPage() {
                         No calling Controller logic from Flow.
                     </p>
 
-                    {/* Flow diagram */}
+
                     <div style={{
                         background: "var(--bg-surface)",
                         border: "1px solid var(--border-muted)",
@@ -131,7 +129,7 @@ export default function DocsPage() {
                     </div>
                 </div>
 
-                {/* Section: Why CL-Architecture */}
+
                 <div style={{ marginTop: "16px" }}>
                     <div style={{
                         height: "1px",
@@ -185,7 +183,7 @@ export default function DocsPage() {
                     </div>
                 </div>
 
-                {/* Footer navigation */}
+
                 <div style={{
                     marginTop: "32px",
                     paddingTop: "24px",

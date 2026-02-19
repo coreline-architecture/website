@@ -4,9 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 
-/* ============================================================
-   ICONS
-   ============================================================ */
+
 const IconBook = () => (
     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
         <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
@@ -65,9 +63,7 @@ const IconGitHub = () => (
     </svg>
 );
 
-/* ============================================================
-   SIDEBAR DATA
-   ============================================================ */
+
 const sidebarGroups = [
     {
         title: "Introduction",
@@ -100,9 +96,7 @@ const sidebarGroups = [
     },
 ];
 
-/* ============================================================
-   DOCS NAVBAR
-   ============================================================ */
+
 function DocsNavbar() {
     const [scrolled, setScrolled] = useState(false);
 
@@ -193,9 +187,7 @@ function DocsNavbar() {
     );
 }
 
-/* ============================================================
-   SIDEBAR
-   ============================================================ */
+
 function Sidebar({ mobile = false, onClose }: { mobile?: boolean; onClose?: () => void }) {
     const pathname = usePathname();
 
@@ -270,9 +262,7 @@ function Sidebar({ mobile = false, onClose }: { mobile?: boolean; onClose?: () =
     );
 }
 
-/* ============================================================
-   DOC LAYOUT
-   ============================================================ */
+
 export function DocLayout({ children }: { children: React.ReactNode }) {
     const [mobileOpen, setMobileOpen] = useState(false);
 

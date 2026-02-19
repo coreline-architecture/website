@@ -1,11 +1,9 @@
 @import "tailwindcss";
 
-/* ============================================================
-   CORE-LINE — DARK SAAS DESIGN SYSTEM
-   ============================================================ */
+
 
 :root {
-  /* Color Tokens */
+
   --bg-base: #080a0d;
   --bg-surface: #0d1117;
   --bg-elevated: #161b22;
@@ -24,20 +22,18 @@
   --accent: #c9d1d9;
   --accent-bright: #f0f6fc;
 
-  /* Glow / highlight */
+
   --glow-sm: 0 0 12px rgba(200, 209, 217, 0.06);
   --glow-md: 0 0 30px rgba(200, 209, 217, 0.08);
   --glow-lg: 0 0 60px rgba(200, 209, 217, 0.06);
 
-  /* Spacing */
+
   --section-y: 120px;
   --container-max: 1280px;
   --container-pad: 32px;
 }
 
-/* ============================================================
-   RESET & BASE
-   ============================================================ */
+
 *,
 *::before,
 *::after {
@@ -61,9 +57,7 @@ body {
   line-height: 1.6;
 }
 
-/* ============================================================
-   SCROLLBAR
-   ============================================================ */
+
 ::-webkit-scrollbar {
   width: 6px;
 }
@@ -81,9 +75,7 @@ body {
   background: var(--border-strong);
 }
 
-/* ============================================================
-   TYPOGRAPHY
-   ============================================================ */
+
 .font-mono {
   font-family: var(--font-jetbrains-mono), 'Fira Code', 'Cascadia Code', monospace;
 }
@@ -136,9 +128,7 @@ body {
   color: var(--text-muted);
 }
 
-/* ============================================================
-   LAYOUT
-   ============================================================ */
+
 .container-main {
   max-width: var(--container-max);
   margin: 0 auto;
@@ -149,9 +139,7 @@ body {
   padding: var(--section-y) 0;
 }
 
-/* ============================================================
-   GRADIENT UTILITIES
-   ============================================================ */
+
 .gradient-text {
   background: linear-gradient(135deg, var(--text-primary) 0%, var(--text-secondary) 100%);
   -webkit-background-clip: text;
@@ -166,9 +154,7 @@ body {
   background-clip: text;
 }
 
-/* ============================================================
-   SURFACE / CARD COMPONENTS
-   ============================================================ */
+
 .surface {
   background: var(--bg-surface);
   border: 1px solid var(--border-muted);
@@ -206,9 +192,7 @@ body {
   box-shadow: var(--glow-sm);
 }
 
-/* ============================================================
-   BUTTONS
-   ============================================================ */
+
 .btn-base {
   display: inline-flex;
   align-items: center;
@@ -263,9 +247,7 @@ body {
   background: var(--bg-elevated);
 }
 
-/* ============================================================
-   BADGE / TAG
-   ============================================================ */
+
 .badge {
   display: inline-flex;
   align-items: center;
@@ -303,9 +285,7 @@ body {
   }
 }
 
-/* ============================================================
-   TERMINAL / CODE BLOCK
-   ============================================================ */
+
 .terminal-saas {
   background: var(--bg-surface);
   border: 1px solid var(--border-default);
@@ -361,17 +341,13 @@ body {
   color: var(--text-secondary);
 }
 
-/* ============================================================
-   DIVIDER / SEPARATOR
-   ============================================================ */
+
 .divider {
   height: 1px;
   background: linear-gradient(90deg, transparent, var(--border-default), transparent);
 }
 
-/* ============================================================
-   GRID NOISE / TEXTURE OVERLAY
-   ============================================================ */
+
 .grid-bg {
   background-image:
     linear-gradient(var(--border-muted) 1px, transparent 1px),
@@ -380,9 +356,7 @@ body {
   background-position: center center;
 }
 
-/* ============================================================
-   GLOW ORBS (decorative)
-   ============================================================ */
+
 .orb {
   position: absolute;
   border-radius: 50%;
@@ -409,9 +383,7 @@ body {
   opacity: 0.08;
 }
 
-/* ============================================================
-   FEATURE ICON WRAPPER
-   ============================================================ */
+
 .icon-wrap {
   width: 44px;
   height: 44px;
@@ -431,9 +403,7 @@ body {
   color: var(--text-primary);
 }
 
-/* ============================================================
-   STAT COUNTER
-   ============================================================ */
+
 .stat-number {
   font-family: var(--font-poppins), sans-serif;
   font-size: 2.5rem;
@@ -443,9 +413,7 @@ body {
   letter-spacing: -0.03em;
 }
 
-/* ============================================================
-   STEP / NUMBERED LIST
-   ============================================================ */
+
 .step-number {
   width: 32px;
   height: 32px;
@@ -462,9 +430,7 @@ body {
   flex-shrink: 0;
 }
 
-/* ============================================================
-   ANIMATIONS
-   ============================================================ */
+
 @keyframes fade-up {
   from {
     opacity: 0;
@@ -521,9 +487,7 @@ body {
   animation: slide-right 0.5s ease-out both;
 }
 
-/* ============================================================
-   RESPONSIVE
-   ============================================================ */
+
 @media (max-width: 768px) {
   :root {
     --section-y: 72px;

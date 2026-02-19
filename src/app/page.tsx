@@ -4,9 +4,7 @@ import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
 import Link from "next/link";
 
-/* ============================================================
-   ANIMATION HELPERS
-   ============================================================ */
+
 
 function Reveal({
   children,
@@ -34,9 +32,7 @@ function Reveal({
   );
 }
 
-/* ============================================================
-   ICONS
-   ============================================================ */
+
 const IconLayers = () => (
   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
     <path d="M12 2L2 7l10 5 10-5-10-5z" />
@@ -137,9 +133,7 @@ const IconShieldCheck = () => (
   </svg>
 );
 
-/* ============================================================
-   DATA
-   ============================================================ */
+
 const layers = [
   {
     id: "01",
@@ -216,9 +210,7 @@ const integrations = [
   "Node.js", "NestJS", "Express", "FastAPI", "Spring", "Gin",
 ];
 
-/* ============================================================
-   FLOATING PILL NAVBAR
-   ============================================================ */
+
 function Navbar() {
   const [scrolled, setScrolled] = useState(false);
 
@@ -344,9 +336,7 @@ function Navbar() {
   );
 }
 
-/* ============================================================
-   HERO STACKS DATA
-   ============================================================ */
+
 const heroStacks = [
   {
     id: "node",
@@ -426,9 +416,7 @@ const heroStacks = [
   },
 ];
 
-/* ============================================================
-   HERO SECTION
-   ============================================================ */
+
 function HeroSection() {
   const [activeStack, setActiveStack] = useState(0);
   const active = heroStacks[activeStack];
@@ -445,7 +433,7 @@ function HeroSection() {
         overflow: "hidden",
       }}
     >
-      {/* Grid background */}
+
       <div
         className="grid-bg"
         style={{
@@ -457,13 +445,13 @@ function HeroSection() {
         }}
       />
 
-      {/* Glow orb */}
+
       <div className="orb orb-1" />
 
       <div className="container-main" style={{ position: "relative", zIndex: 1 }}>
         <div style={{ maxWidth: "860px", margin: "0 auto", textAlign: "center" }}>
 
-          {/* Badge */}
+
           <motion.div
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
@@ -476,7 +464,7 @@ function HeroSection() {
             </div>
           </motion.div>
 
-          {/* Headline */}
+
           <motion.h1
             className="text-display"
             initial={{ opacity: 0, y: 32 }}
@@ -496,7 +484,7 @@ function HeroSection() {
             </span>
           </motion.h1>
 
-          {/* Subheadline */}
+
           <motion.p
             className="text-body"
             initial={{ opacity: 0, y: 24 }}
@@ -508,7 +496,7 @@ function HeroSection() {
             clarity, consistency, and scalability to any codebase — from startup to enterprise.
           </motion.p>
 
-          {/* CTAs */}
+
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -566,7 +554,7 @@ function HeroSection() {
             </Link>
           </motion.div>
 
-          {/* Multi-Stack Terminal */}
+
           <motion.div
             initial={{ opacity: 0, scale: 0.95, y: 30 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
@@ -584,7 +572,7 @@ function HeroSection() {
               overflow: "hidden",
               textAlign: "left"
             }}>
-              {/* Terminal Header */}
+
               <div style={{
                 display: "flex", alignItems: "center", justifyContent: "space-between",
                 padding: "14px 20px",
@@ -609,7 +597,7 @@ function HeroSection() {
                 <div style={{ width: "33px" }} />
               </div>
 
-              {/* Stack Selector Tabs */}
+
               <div style={{
                 display: "flex",
                 alignItems: "center",
@@ -644,7 +632,7 @@ function HeroSection() {
                 ))}
               </div>
 
-              {/* Terminal Body */}
+
               <div style={{
                 padding: "20px 24px",
                 fontFamily: "var(--font-jetbrains-mono), monospace",
@@ -673,7 +661,7 @@ function HeroSection() {
               </div>
             </div>
 
-            {/* Subtle caption */}
+
             <p style={{
               textAlign: "center",
               marginTop: "14px",
@@ -693,9 +681,7 @@ function HeroSection() {
 
 
 
-/* ============================================================
-   ARCHITECTURE SECTION — vertical pipeline
-   ============================================================ */
+
 function ArchitectureSection() {
   const [active, setActive] = useState<number | null>(null);
 
@@ -715,7 +701,7 @@ function ArchitectureSection() {
         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "60px", alignItems: "center" }}>
           {/* Left: vertical pipeline */}
           <div style={{ position: "relative" }}>
-            {/* Vertical line */}
+
             <div style={{
               position: "absolute",
               left: "19px",
@@ -739,7 +725,7 @@ function ArchitectureSection() {
                       position: "relative",
                     }}
                   >
-                    {/* Node dot */}
+
                     <div style={{
                       width: "38px",
                       height: "38px",
@@ -755,7 +741,7 @@ function ArchitectureSection() {
                       {layer.icon}
                     </div>
 
-                    {/* Content */}
+
                     <div style={{ paddingTop: "6px" }}>
                       <div style={{ display: "flex", alignItems: "center", gap: "10px", marginBottom: "6px" }}>
                         <span style={{
@@ -787,7 +773,7 @@ function ArchitectureSection() {
             </div>
           </div>
 
-          {/* Right: data-flow diagram */}
+
           <Reveal delay={0.3}>
             <div style={{
               background: "var(--bg-surface)",
@@ -835,9 +821,7 @@ function ArchitectureSection() {
   );
 }
 
-/* ============================================================
-   FEATURES SECTION — bento grid
-   ============================================================ */
+
 function FeaturesSection() {
   return (
     <section className="section-pad" style={{ background: "var(--bg-surface)", borderTop: "1px solid var(--border-muted)", borderBottom: "1px solid var(--border-muted)" }}>
@@ -850,9 +834,9 @@ function FeaturesSection() {
           </p>
         </Reveal>
 
-        {/* Bento grid */}
+
         <div style={{ display: "grid", gridTemplateColumns: "repeat(12, 1fr)", gridTemplateRows: "auto", gap: "12px" }}>
-          {/* Large card — Language Agnostic */}
+
           <Reveal delay={0} style={{ gridColumn: "span 5" }}>
             <div style={{
               background: "var(--bg-elevated)", border: "1px solid var(--border-muted)",
@@ -872,7 +856,7 @@ function FeaturesSection() {
             </div>
           </Reveal>
 
-          {/* Medium card — CLI */}
+
           <Reveal delay={0.08} style={{ gridColumn: "span 4" }}>
             <div style={{
               background: "var(--bg-elevated)", border: "1px solid var(--border-muted)",
@@ -890,7 +874,7 @@ function FeaturesSection() {
             </div>
           </Reveal>
 
-          {/* Small card — Zero Lock-in */}
+
           <Reveal delay={0.12} style={{ gridColumn: "span 3" }}>
             <div style={{
               background: "var(--bg-elevated)", border: "1px solid var(--border-muted)",
@@ -905,7 +889,7 @@ function FeaturesSection() {
             </div>
           </Reveal>
 
-          {/* Small card — Team */}
+
           <Reveal delay={0.15} style={{ gridColumn: "span 3" }}>
             <div style={{
               background: "var(--bg-elevated)", border: "1px solid var(--border-muted)",
@@ -920,7 +904,7 @@ function FeaturesSection() {
             </div>
           </Reveal>
 
-          {/* Wide card — Testability */}
+
           <Reveal delay={0.18} style={{ gridColumn: "span 5" }}>
             <div style={{
               background: "var(--bg-elevated)", border: "1px solid var(--border-muted)",
@@ -940,7 +924,7 @@ function FeaturesSection() {
             </div>
           </Reveal>
 
-          {/* Medium card — Production */}
+
           <Reveal delay={0.2} style={{ gridColumn: "span 4" }}>
             <div style={{
               background: "var(--bg-elevated)", border: "1px solid var(--border-muted)",
@@ -963,9 +947,7 @@ function FeaturesSection() {
 
 
 
-/* ============================================================
-   INTEGRATIONS SECTION
-   ============================================================ */
+
 function IntegrationsSection() {
   return (
     <section className="section-pad" style={{ background: "var(--bg-surface)", borderTop: "1px solid var(--border-muted)", borderBottom: "1px solid var(--border-muted)" }}>
@@ -1019,9 +1001,7 @@ function IntegrationsSection() {
   );
 }
 
-/* ============================================================
-   CTA SECTION
-   ============================================================ */
+
 function CTASection() {
   return (
     <section className="section-pad">
@@ -1038,7 +1018,7 @@ function CTASection() {
               overflow: "hidden",
             }}
           >
-            {/* Subtle grid */}
+
             <div
               className="grid-bg"
               style={{
@@ -1096,9 +1076,7 @@ function CTASection() {
   );
 }
 
-/* ============================================================
-   FOOTER
-   ============================================================ */
+
 function Footer() {
   return (
     <footer style={{
@@ -1108,7 +1086,7 @@ function Footer() {
     }}>
       <div className="container-main">
         <div style={{ display: "grid", gridTemplateColumns: "2fr 1fr 1fr 1fr", gap: "48px", marginBottom: "48px" }}>
-          {/* Brand */}
+
           <div>
             <div style={{ display: "flex", alignItems: "center", gap: "10px", marginBottom: "16px" }}>
               <div style={{
@@ -1148,7 +1126,7 @@ function Footer() {
             </a>
           </div>
 
-          {/* Docs */}
+
           <div>
             <div className="text-label" style={{ marginBottom: "16px" }}>Documentation</div>
             <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
@@ -1176,7 +1154,7 @@ function Footer() {
             </div>
           </div>
 
-          {/* Resources */}
+
           <div>
             <div className="text-label" style={{ marginBottom: "16px" }}>Resources</div>
             <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
@@ -1204,7 +1182,7 @@ function Footer() {
             </div>
           </div>
 
-          {/* Community */}
+
           <div>
             <div className="text-label" style={{ marginBottom: "16px" }}>Community</div>
             <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
@@ -1246,9 +1224,7 @@ function Footer() {
   );
 }
 
-/* ============================================================
-   PAGE ENTRY
-   ============================================================ */
+
 export default function Home() {
   return (
     <div style={{ background: "var(--bg-base)", minHeight: "100vh" }}>

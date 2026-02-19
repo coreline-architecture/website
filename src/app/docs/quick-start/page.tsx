@@ -4,9 +4,7 @@ import { DocLayout } from "@/components/layout/DocLayout";
 import { motion } from "framer-motion";
 import { useState } from "react";
 
-/* ============================================================
-   ICONS
-   ============================================================ */
+
 const IconArrowRight = () => (
     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <path d="M5 12h14M12 5l7 7-7 7" />
@@ -32,9 +30,7 @@ const IconCheck = () => (
     </svg>
 );
 
-/* ============================================================
-   CODE BLOCK
-   ============================================================ */
+
 function CodeBlock({ command }: { command: string }) {
     const [copied, setCopied] = useState(false);
 
@@ -83,9 +79,7 @@ function CodeBlock({ command }: { command: string }) {
     );
 }
 
-/* ============================================================
-   STEP COMPONENT
-   ============================================================ */
+
 function Step({ number, title, children }: { number: string; title: string; children: React.ReactNode }) {
     return (
         <div style={{ display: "flex", gap: "20px" }}>
@@ -127,7 +121,7 @@ function Step({ number, title, children }: { number: string; title: string; chil
 export default function QuickStartPage() {
     return (
         <DocLayout>
-            {/* Header */}
+
             <div style={{ marginBottom: "48px" }}>
                 <motion.div
                     initial={{ opacity: 0, y: 16 }}
@@ -167,7 +161,7 @@ export default function QuickStartPage() {
                 </motion.div>
             </div>
 
-            {/* Steps */}
+
             <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -202,7 +196,7 @@ export default function QuickStartPage() {
                     </p>
                 </Step>
 
-                {/* What's Next */}
+
                 <div style={{
                     padding: "28px",
                     borderRadius: "12px",
@@ -261,7 +255,7 @@ export default function QuickStartPage() {
                     </a>
                 </div>
 
-                {/* Footer navigation */}
+
                 <div style={{
                     marginTop: "16px",
                     paddingTop: "24px",

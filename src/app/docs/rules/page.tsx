@@ -3,18 +3,14 @@
 import { DocLayout } from "@/components/layout/DocLayout";
 import { motion } from "framer-motion";
 
-/* ============================================================
-   ICONS
-   ============================================================ */
+
 const IconArrowLeft = () => (
     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <path d="M19 12H5M12 19l-7-7 7-7" />
     </svg>
 );
 
-/* ============================================================
-   BADGE
-   ============================================================ */
+
 function Badge({ label }: { label: string }) {
     const colors: Record<string, { bg: string; border: string; text: string }> = {
         MANDATORY: { bg: "rgba(139,148,158,0.1)", border: "rgba(139,148,158,0.2)", text: "var(--text-secondary)" },
@@ -44,9 +40,7 @@ function Badge({ label }: { label: string }) {
     );
 }
 
-/* ============================================================
-   RULES DATA
-   ============================================================ */
+
 const rules = [
     {
         number: "01",
@@ -126,7 +120,7 @@ const rules = [
 export default function RulesPage() {
     return (
         <DocLayout>
-            {/* Header */}
+
             <div style={{ marginBottom: "48px" }}>
                 <motion.div
                     initial={{ opacity: 0, y: 16 }}
@@ -166,7 +160,7 @@ export default function RulesPage() {
                 </motion.div>
             </div>
 
-            {/* Summary */}
+
             <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -187,7 +181,7 @@ export default function RulesPage() {
                 </div>
             </motion.div>
 
-            {/* Rules */}
+
             <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -252,7 +246,7 @@ export default function RulesPage() {
                     </div>
                 ))}
 
-                {/* Footer navigation */}
+
                 <div style={{
                     marginTop: "32px",
                     paddingTop: "24px",
