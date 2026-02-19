@@ -934,7 +934,7 @@ function FeaturesSection() {
               <p className="text-body" style={{ fontSize: "0.875rem" }}>Each layer is independently testable. Unit, integration, and e2e tests become natural, not painful.</p>
               <div style={{ display: "flex", gap: "8px", marginTop: "20px" }}>
                 {["Unit", "Integration", "E2E"].map(t => (
-                  <span key={t} style={{ padding: "4px 12px", borderRadius: "100px", fontSize: "0.75rem", background: "#3fb95018", border: "1px solid #3fb95040", color: "#3fb950" }}>{t}</span>
+                  <span key={t} style={{ padding: "4px 12px", borderRadius: "100px", fontSize: "0.75rem", background: "var(--bg-overlay)", border: "1px solid var(--border-default)", color: "var(--text-secondary)", fontFamily: "var(--font-jetbrains-mono), monospace" }}>{t}</span>
                 ))}
               </div>
             </div>
@@ -1079,7 +1079,7 @@ function CTASection() {
                       background: "var(--bg-elevated)",
                       border: "1px solid var(--border-default)",
                       display: "flex", alignItems: "center", justifyContent: "center",
-                      color: "#3fb950",
+                      color: "var(--text-secondary)",
                       flexShrink: 0,
                     }}>
                       <IconCheck />
