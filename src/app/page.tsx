@@ -416,7 +416,6 @@ const heroStacks = [
   },
 ];
 
-
 function HeroSection() {
   const [activeStack, setActiveStack] = useState(0);
   const active = heroStacks[activeStack];
@@ -680,8 +679,6 @@ function HeroSection() {
 }
 
 
-
-
 function ArchitectureSection() {
   const [active, setActive] = useState<number | null>(null);
 
@@ -821,7 +818,6 @@ function ArchitectureSection() {
   );
 }
 
-
 function FeaturesSection() {
   return (
     <section className="section-pad" style={{ background: "var(--bg-surface)", borderTop: "1px solid var(--border-muted)", borderBottom: "1px solid var(--border-muted)" }}>
@@ -943,8 +939,6 @@ function FeaturesSection() {
     </section>
   );
 }
-
-
 
 
 
@@ -1075,7 +1069,6 @@ function CTASection() {
     </section>
   );
 }
-
 
 function Footer() {
   return (
@@ -1223,7 +1216,6 @@ function Footer() {
     </footer>
   );
 }
-
 
 export default function Home() {
   return (
