@@ -949,7 +949,7 @@ function FeaturesSection() {
             }}
               onMouseEnter={(e) => (e.currentTarget.style.borderColor = "var(--border-strong)")}
               onMouseLeave={(e) => (e.currentTarget.style.borderColor = "var(--border-muted)")}>
-              <div style={{ fontSize: "2rem", marginBottom: "16px" }}>🛡️</div>
+              <div style={{ marginBottom: "16px", color: "var(--text-secondary)" }}><IconShieldCheck /></div>
               <h3 className="text-title" style={{ marginBottom: "10px" }}>Production Proven</h3>
               <p className="text-body" style={{ fontSize: "0.875rem" }}>Battle-tested in production systems. Designed for scale from day one.</p>
             </div>
