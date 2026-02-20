@@ -13,7 +13,7 @@ const IconArrowRight = () => (
 export default function DocsPage() {
     return (
         <DocLayout>
-            <div style={{ marginBottom: "64px" }}>
+            <div style={{ marginBottom: "72px" }}>
                 <motion.div
                     initial={{ opacity: 0, y: 16 }}
                     animate={{ opacity: 1, y: 0 }}
