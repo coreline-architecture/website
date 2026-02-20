@@ -499,7 +499,7 @@ function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.5 }}
-            style={{ display: "flex", gap: "10px", justifyContent: "center", flexWrap: "wrap", marginBottom: "64px", alignItems: "center" }}
+            style={{ display: "flex", gap: "12px", justifyContent: "center", flexWrap: "wrap", marginBottom: "72px", alignItems: "center" }}
           >
             <Link href="/docs/quick-start" style={{
               display: "inline-flex", alignItems: "center", gap: "6px",
