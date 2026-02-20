@@ -694,7 +694,7 @@ function ArchitectureSection() {
           </p>
         </Reveal>
 
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "60px", alignItems: "center" }}>
+        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "80px", alignItems: "center" }}>
           {/* Left: vertical pipeline */}
           <div style={{ position: "relative" }}>
 
