@@ -1021,7 +1021,7 @@ function CTASection() {
                 and maintain codebases that actually scale.
               </p>
 
-              <div style={{ display: "flex", gap: "12px", justifyContent: "center", flexWrap: "wrap", marginBottom: "40px" }}>
+              <div style={{ display: "flex", gap: "16px", justifyContent: "center", flexWrap: "wrap", marginBottom: "48px" }}>
                 <Link href="/docs/quick-start" className="btn-primary btn-base" style={{ fontSize: "0.9375rem", padding: "12px 28px" }}>
                   Start for Free
                   <IconArrow />
