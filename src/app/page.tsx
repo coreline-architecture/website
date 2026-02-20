@@ -829,7 +829,7 @@ function FeaturesSection() {
           </p>
         </Reveal>
 
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(12, 1fr)", gridTemplateRows: "auto", gap: "12px" }}>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(12, 1fr)", gridTemplateRows: "auto", gap: "16px" }}>
           <Reveal delay={0} style={{ gridColumn: "span 5" }}>
             <div style={{
               background: "var(--bg-elevated)", border: "1px solid var(--border-muted)",
