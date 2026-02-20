@@ -821,7 +821,7 @@ function FeaturesSection() {
   return (
     <section className="section-pad" style={{ background: "var(--bg-surface)", borderTop: "1px solid var(--border-muted)", borderBottom: "1px solid var(--border-muted)" }}>
       <div className="container-main">
-        <Reveal className="text-center" style={{ marginBottom: "64px" }}>
+        <Reveal className="text-center" style={{ marginBottom: "72px" }}>
           <div className="text-label" style={{ marginBottom: "16px" }}>Core Principles</div>
           <h2 className="text-headline" style={{ marginBottom: "16px" }}>Engineered for absolute discipline</h2>
           <p className="text-body" style={{ maxWidth: "500px", margin: "0 auto" }}>
