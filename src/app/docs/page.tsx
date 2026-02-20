@@ -37,7 +37,7 @@ export default function DocsPage() {
                         lineHeight: 1.1,
                         letterSpacing: "-0.03em",
                         color: "var(--text-primary)",
-                        marginBottom: "24px",
+                        marginBottom: "28px",
                     }}>
                         What is <span style={{ color: "var(--text-muted)" }}>Core—Line?</span>
                     </h1>
