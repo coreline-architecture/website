@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 
 const IconBook = () => (
@@ -69,6 +70,8 @@ const sidebarGroups = [
         items: [
             { label: "What is Core-Line?", href: "/docs" },
             { label: "Standards", href: "/docs/standards" },
+            { label: "Ecosystem", href: "/docs/ecosystem" },
+            { label: "FAQ", href: "/docs/faq" },
         ]
     },
     {
@@ -93,6 +96,7 @@ const sidebarGroups = [
         ]
     },
 ];
+
 function DocsNavbar() {
     const [scrolled, setScrolled] = useState(false);
 
@@ -182,30 +186,31 @@ function DocsNavbar() {
         </div>
     );
 }
+
 function Sidebar({ mobile = false, onClose }: { mobile?: boolean; onClose?: () => void }) {
     const pathname = usePathname();
 
     return (
         <div style={{
-            width: mobile ? "100%" : "240px",
+            width: mobile ? "100%" : "230px",
             flexShrink: 0,
             padding: mobile ? "20px" : "0",
         }}>
-            <div style={{ display: "flex", flexDirection: "column", gap: "28px" }}>
+            <div style={{ display: "flex", flexDirection: "column", gap: "32px" }}>
                 {sidebarGroups.map((group) => (
                     <div key={group.title}>
                         <div style={{
-                            display: "flex", alignItems: "center", gap: "8px",
+                            display: "flex", alignItems: "center", gap: "10px",
                             fontFamily: "var(--font-jetbrains-mono), monospace",
-                            fontSize: "0.6875rem",
-                            fontWeight: 500,
-                            letterSpacing: "0.1em",
+                            fontSize: "0.625rem",
+                            fontWeight: 600,
+                            letterSpacing: "0.15em",
                             textTransform: "uppercase" as const,
                             color: "var(--text-faint)",
-                            marginBottom: "10px",
-                            padding: "0 8px",
+                            marginBottom: "12px",
+                            padding: "0 10px",
                         }}>
-                            {group.icon}
+                            <span style={{ opacity: 0.6 }}>{group.icon}</span>
                             {group.title}
                         </div>
                         <div style={{ display: "flex", flexDirection: "column", gap: "2px" }}>
@@ -220,20 +225,22 @@ function Sidebar({ mobile = false, onClose }: { mobile?: boolean; onClose?: () =
                                             display: "flex",
                                             alignItems: "center",
                                             justifyContent: "space-between",
-                                            padding: "7px 10px",
-                                            borderRadius: "6px",
+                                            padding: "8px 12px",
+                                            borderRadius: "8px",
                                             fontSize: "0.8125rem",
                                             fontWeight: isActive ? 600 : 400,
                                             color: isActive ? "var(--text-primary)" : "var(--text-muted)",
-                                            background: isActive ? "var(--bg-elevated)" : "transparent",
+                                            background: isActive ? "rgba(255, 255, 255, 0.03)" : "transparent",
                                             textDecoration: "none",
-                                            transition: "all 0.15s ease",
-                                            border: isActive ? "1px solid var(--border-muted)" : "1px solid transparent",
+                                            transition: "all 0.2s cubic-bezier(0.4, 0, 0.2, 1)",
+                                            border: "1px solid",
+                                            borderColor: isActive ? "rgba(255, 255, 255, 0.05)" : "transparent",
+                                            boxShadow: isActive ? "0 4px 12px rgba(0,0,0,0.1)" : "none",
                                         }}
                                         onMouseEnter={(e) => {
                                             if (!isActive) {
                                                 e.currentTarget.style.color = "var(--text-secondary)";
-                                                e.currentTarget.style.background = "var(--bg-surface)";
+                                                e.currentTarget.style.background = "rgba(255, 255, 255, 0.02)";
                                             }
                                         }}
                                         onMouseLeave={(e) => {
@@ -244,7 +251,11 @@ function Sidebar({ mobile = false, onClose }: { mobile?: boolean; onClose?: () =
                                         }}
                                     >
                                         {item.label}
-                                        {isActive && <IconChevron />}
+                                        {isActive && (
+                                            <motion.div layoutId="active-indicator">
+                                                <IconChevron />
+                                            </motion.div>
+                                        )}
                                     </Link>
                                 );
                             })}

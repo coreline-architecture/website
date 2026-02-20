@@ -2,126 +2,54 @@
 
 import { DocLayout } from "@/components/layout/DocLayout";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
-
-const IconArrowLeft = () => (
-    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M19 12H5M12 19l-7-7 7-7" />
+const IconLock = () => (
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+        <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+        <path d="M7 11V7a5 5 0 0 1 10 0v4" />
     </svg>
 );
 
+const IconAlert = () => (
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+        <circle cx="12" cy="12" r="10" />
+        <line x1="12" y1="8" x2="12" y2="12" />
+        <line x1="12" y1="16" x2="12.01" y2="16" />
+    </svg>
+);
 
-function Badge({ label }: { label: string }) {
-    const colors: Record<string, { bg: string; border: string; text: string }> = {
-        MANDATORY: { bg: "rgba(139,148,158,0.1)", border: "rgba(139,148,158,0.2)", text: "var(--text-secondary)" },
-        STRICT: { bg: "rgba(139,148,158,0.08)", border: "rgba(139,148,158,0.15)", text: "var(--text-muted)" },
-        DRY: { bg: "rgba(139,148,158,0.06)", border: "rgba(139,148,158,0.12)", text: "var(--text-muted)" },
-        PROTECTED: { bg: "rgba(139,148,158,0.08)", border: "rgba(139,148,158,0.15)", text: "var(--text-muted)" },
-        CONVENTION: { bg: "rgba(139,148,158,0.06)", border: "rgba(139,148,158,0.1)", text: "var(--text-faint)" },
-    };
+const IconArrowRight = () => (
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M5 12h14M12 5l7 7-7 7" />
+    </svg>
+);
 
-    const style = colors[label] ?? colors.CONVENTION;
-
+function RuleCard({ title, code, children }: { title: string; code?: string; children: React.ReactNode }) {
     return (
-        <span style={{
-            padding: "2px 8px",
-            borderRadius: "100px",
-            fontSize: "0.625rem",
-            fontWeight: 600,
-            fontFamily: "var(--font-jetbrains-mono), monospace",
-            letterSpacing: "0.08em",
-            textTransform: "uppercase" as const,
-            background: style.bg,
-            border: `1px solid ${style.border}`,
-            color: style.text,
+        <div style={{
+            padding: "32px",
+            borderRadius: "16px",
+            background: "rgba(255, 255, 255, 0.02)",
+            border: "1px solid var(--border-muted)",
+            marginBottom: "32px",
         }}>
-            {label}
-        </span>
+            <div style={{ display: "flex", alignItems: "center", gap: "10px", marginBottom: "16px" }}>
+                <div style={{ color: "var(--text-faint)" }}><IconLock /></div>
+                <h3 style={{ fontSize: "1.125rem", fontWeight: 600, color: "var(--text-primary)", fontFamily: "var(--font-poppins), sans-serif" }}>{title}</h3>
+                {code && <span style={{ marginLeft: "auto", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: "0.625rem", color: "var(--text-faint)", background: "rgba(255,255,255,0.05)", padding: "2px 6px", borderRadius: "4px" }}>{code}</span>}
+            </div>
+            <div style={{ color: "var(--text-secondary)", fontSize: "0.9375rem", lineHeight: 1.7 }}>
+                {children}
+            </div>
+        </div>
     );
 }
-
-
-const rules = [
-    {
-        number: "01",
-        title: "Unidirectional Flow",
-        badge: "MANDATORY",
-        details: [
-            "Every HTTP/gRPC/event-driven request follows one direction: Route → Port → Flow → Source.",
-            "No backward calls. No skipping layers. No circular dependencies.",
-        ],
-    },
-    {
-        number: "02",
-        title: "Layer Responsibility",
-        badge: "STRICT",
-        details: [
-            "Port: Handles request/response parsing. No business logic.",
-            "Flow: Contains all business logic, orchestration, and validations.",
-            "Source: Manages external I/O — databases, caches, third-party APIs.",
-        ],
-    },
-    {
-        number: "03",
-        title: "DTO Contracts",
-        badge: "STRICT",
-        details: [
-            "Every inter-layer communication uses typed DTOs.",
-            "No raw objects, no untyped maps, no ambient data.",
-        ],
-    },
-    {
-        number: "04",
-        title: "Global Async Handler",
-        badge: "DRY",
-        details: [
-            "A centralized error handler wraps all async operations.",
-            "No try/catch blocks in individual layers except for domain-specific recovery.",
-        ],
-    },
-    {
-        number: "05",
-        title: "Universal Response Shape",
-        badge: "DRY",
-        details: [
-            "All API responses follow the same envelope: { success, data, error, meta }.",
-            "Consistency across the entire service boundary.",
-        ],
-    },
-    {
-        number: "06",
-        title: "Source Isolation",
-        badge: "PROTECTED",
-        details: [
-            "Source implementations are never imported directly by Flow.",
-            "Use interfaces/abstractions so sources can be swapped without touching business logic.",
-        ],
-    },
-    {
-        number: "07",
-        title: "Logging Discipline",
-        badge: "CONVENTION",
-        details: [
-            "Structured logging at every layer boundary.",
-            "Request correlation IDs propagated through the entire call chain.",
-        ],
-    },
-    {
-        number: "08",
-        title: "Commit Discipline",
-        badge: "CONVENTION",
-        details: [
-            "Atomic commits following the conventional commit standard.",
-            "Format: type(scope): description — e.g., feat(user): add registration flow.",
-        ],
-    },
-];
 
 export default function RulesPage() {
     return (
         <DocLayout>
-
-            <div style={{ marginBottom: "48px" }}>
+            <div style={{ marginBottom: "64px" }}>
                 <motion.div
                     initial={{ opacity: 0, y: 16 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -130,155 +58,156 @@ export default function RulesPage() {
                     <div style={{
                         fontFamily: "var(--font-jetbrains-mono), monospace",
                         fontSize: "0.6875rem",
-                        fontWeight: 500,
-                        letterSpacing: "0.12em",
+                        fontWeight: 600,
+                        letterSpacing: "0.15rem",
                         textTransform: "uppercase" as const,
                         color: "var(--text-muted)",
                         marginBottom: "12px",
                     }}>
-                        Architecture
+                        Implementation
                     </div>
                     <h1 style={{
                         fontFamily: "var(--font-poppins), sans-serif",
-                        fontSize: "clamp(2rem, 4vw, 2.75rem)",
+                        fontSize: "clamp(2.5rem, 5vw, 3.5rem)",
                         fontWeight: 700,
-                        lineHeight: 1.15,
-                        letterSpacing: "-0.02em",
+                        lineHeight: 1.1,
+                        letterSpacing: "-0.03em",
                         color: "var(--text-primary)",
-                        marginBottom: "16px",
+                        marginBottom: "24px",
                     }}>
-                        Rules & Guarantees
+                        Rules & <span style={{ color: "var(--text-muted)" }}>Guarantees</span>
                     </h1>
                     <p style={{
-                        fontSize: "1.0625rem",
-                        lineHeight: 1.7,
+                        fontSize: "1.125rem",
+                        lineHeight: 1.75,
                         color: "var(--text-secondary)",
-                        maxWidth: "480px",
+                        maxWidth: "600px",
                     }}>
-                        The non-negotiable rules that keep your codebase sane.
+                        The "Laws of the Core-Line" ensure that every developer on the team writes code that looks, performs, and scales identically.
                     </p>
                 </motion.div>
             </div>
 
-
-            <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.1 }}
-                style={{ marginBottom: "40px" }}
-            >
+            <section style={{ marginBottom: "80px" }}>
                 <div style={{
-                    padding: "20px 24px",
-                    borderRadius: "10px",
-                    background: "var(--bg-surface)",
-                    borderLeft: "3px solid var(--border-strong)",
-                    fontStyle: "italic",
-                    fontSize: "0.9375rem",
-                    lineHeight: 1.7,
-                    color: "var(--text-secondary)",
-                }}>
-                    These rules are not suggestions. They are the contract between your code and your team.
-                </div>
-            </motion.div>
-
-
-            <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.2 }}
-                style={{ display: "flex", flexDirection: "column", gap: "12px" }}
-            >
-                {rules.map((rule, i) => (
-                    <div
-                        key={i}
-                        style={{
-                            padding: "20px 22px",
-                            borderRadius: "10px",
-                            background: "var(--bg-surface)",
-                            border: "1px solid var(--border-muted)",
-                            transition: "border-color 0.2s ease",
-                        }}
-                        onMouseEnter={(e) => (e.currentTarget.style.borderColor = "var(--border-default)")}
-                        onMouseLeave={(e) => (e.currentTarget.style.borderColor = "var(--border-muted)")}
-                    >
-                        <div style={{ display: "flex", alignItems: "center", gap: "12px", marginBottom: "12px" }}>
-                            <span style={{
-                                fontFamily: "var(--font-jetbrains-mono), monospace",
-                                fontSize: "0.6875rem",
-                                fontWeight: 600,
-                                color: "var(--text-faint)",
-                                letterSpacing: "0.05em",
-                            }}>
-                                {rule.number}
-                            </span>
-                            <h3 style={{
-                                fontFamily: "var(--font-poppins), sans-serif",
-                                fontSize: "1rem",
-                                fontWeight: 600,
-                                color: "var(--text-primary)",
-                                flex: 1,
-                            }}>
-                                {rule.title}
-                            </h3>
-                            <Badge label={rule.badge} />
-                        </div>
-
-                        <div style={{ display: "flex", flexDirection: "column", gap: "6px", paddingLeft: "30px" }}>
-                            {rule.details.map((detail, j) => (
-                                <div key={j} style={{ display: "flex", alignItems: "flex-start", gap: "8px" }}>
-                                    <div style={{
-                                        width: "4px", height: "4px",
-                                        borderRadius: "50%",
-                                        background: "var(--text-faint)",
-                                        flexShrink: 0,
-                                        marginTop: "8px",
-                                    }} />
-                                    <span style={{
-                                        fontSize: "0.8125rem",
-                                        lineHeight: 1.6,
-                                        color: "var(--text-muted)",
-                                    }}>
-                                        {detail}
-                                    </span>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                ))}
-
-
-                <div style={{
-                    marginTop: "32px",
-                    paddingTop: "24px",
-                    borderTop: "1px solid var(--border-muted)",
+                    padding: "24px",
+                    borderRadius: "12px",
+                    background: "rgba(235, 87, 87, 0.05)",
+                    border: "1px solid rgba(235, 87, 87, 0.2)",
+                    color: "rgba(235, 87, 87, 0.9)",
                     display: "flex",
-                    justifyContent: "space-between",
-                    alignItems: "center",
+                    gap: "16px",
+                    marginBottom: "48px"
                 }}>
-                    <a
-                        href="/docs/quick-start"
-                        style={{
-                            display: "inline-flex", alignItems: "center", gap: "6px",
-                            fontSize: "0.8125rem",
-                            fontWeight: 500,
-                            color: "var(--text-muted)",
-                            textDecoration: "none",
-                            transition: "color 0.2s ease",
-                        }}
-                        onMouseEnter={(e) => (e.currentTarget.style.color = "var(--text-primary)")}
-                        onMouseLeave={(e) => (e.currentTarget.style.color = "var(--text-muted)")}
-                    >
-                        <IconArrowLeft /> Quick Start
-                    </a>
-                    <span style={{
-                        fontSize: "0.75rem",
-                        color: "var(--text-faint)",
-                        fontFamily: "var(--font-jetbrains-mono), monospace",
-                    }}>
-                        Last updated: February 2026
-                    </span>
+                    <div style={{ marginTop: "2px" }}><IconAlert /></div>
+                    <div style={{ fontSize: "0.875rem", lineHeight: 1.6 }}>
+                        <strong>Golden Rule:</strong> High-level business logic (Flow) must NEVER depend on low-level technical details (Source/Link). All communication with the outside world must be through interfaces.
+                    </div>
                 </div>
-            </motion.div>
+
+                <div style={{ display: "flex", flexDirection: "column" }}>
+                    <RuleCard title="The Controller 'Async Wrap' Rule" code="LAW-001">
+                        Controllers (Ports) must never contain try/catch blocks. Error handling must be delegated to the <strong>Pulse</strong> layer. This ensures that controllers remain lean and solely focused on request parsing.
+                    </RuleCard>
+
+                    <RuleCard title="Layer Directionality" code="LAW-002">
+                        Data flows in one direction: <strong>Port → Flow → Source/Link</strong>. It is strictly forbidden for a Source to call a Flow, or for a Flow to call a Port.
+                    </RuleCard>
+
+                    <RuleCard title="Global Response Shape" code="LAW-003">
+                        Every API response must follow the <strong>Gateway</strong> standard. This ensures that the frontend receives a consistent object structure (Success, Data, Error, Meta) regardless of which module or microservice is being called.
+                    </RuleCard>
+
+                    <RuleCard title="Validation & Mapping" code="LAW-004">
+                        Validation must happen in the <strong>Rule</strong> layer before data enters the logic Flow. Data transformation (Bridge) must happen before data leaves the system, ensuring internal <strong>Shapes</strong> never leak to the client.
+                    </RuleCard>
+
+                    <RuleCard title="No Framework Bleeding" code="LAW-005">
+                        Business logic (Flow) classes should be pure. They should not import framework-specific decorators, request objects, or database-specific types.
+                    </RuleCard>
+                </div>
+            </section>
+
+            <section style={{ marginBottom: "80px" }}>
+                <h2 style={{
+                    fontSize: "1.5rem",
+                    fontWeight: 600,
+                    marginBottom: "32px",
+                    color: "var(--text-primary)",
+                    fontFamily: "var(--font-poppins), sans-serif",
+                }}>
+                    Layer Responsibilities
+                </h2>
+                <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: "24px" }}>
+                    {[
+                        { title: "Pulse", desc: "The heartbeat. Responsible for global error harvesting, logging, and observability." },
+                        { title: "Orbit", desc: "The atmosphere. Responsible for configuration, environment security, and constants." },
+                        { title: "Gateway", desc: "The interface. Responsible for standardizing the shape of every outgoing response." },
+                        { title: "Shape", desc: "The DNA. Responsible for defining the internal core data models used by the Flow." },
+                        { title: "Bridge", desc: "The translator. Responsible for mapping internal Shapes to external DTOs." },
+                        { title: "Link", desc: "The tether. Responsible for third-party integrations (Stripe, Twilio, etc.) via strict providers." }
+                    ].map((item, i) => (
+                        <div key={i} style={{ padding: "24px", borderRadius: "12px", background: "rgba(255,255,255,0.01)", border: "1px solid var(--border-muted)" }}>
+                            <h4 style={{ color: "var(--text-primary)", fontSize: "0.9375rem", fontWeight: 600, marginBottom: "8px" }}>{item.title}</h4>
+                            <p style={{ color: "var(--text-muted)", fontSize: "0.8125rem", lineHeight: 1.6 }}>{item.desc}</p>
+                        </div>
+                    ))}
+                </div>
+            </section>
+
+            <div style={{
+                marginTop: "64px",
+                paddingTop: "32px",
+                borderTop: "1px solid var(--border-muted)",
+                display: "flex",
+                justifyContent: "space-between",
+                alignItems: "center"
+            }}>
+                <Link
+                    href="/docs/quick-start"
+                    style={{
+                        display: "inline-flex",
+                        alignItems: "center",
+                        gap: "10px",
+                        color: "var(--text-muted)",
+                        textDecoration: "none",
+                        fontSize: "0.875rem",
+                        fontWeight: 600,
+                        padding: "10px 20px",
+                        borderRadius: "100px",
+                        transition: "all 0.2s ease",
+                    }}
+                    onMouseEnter={(e) => { e.currentTarget.style.color = "var(--text-primary)"; e.currentTarget.style.transform = "translateX(-4px)"; }}
+                    onMouseLeave={(e) => { e.currentTarget.style.color = "var(--text-muted)"; e.currentTarget.style.transform = "translateX(0)"; }}
+                >
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" style={{ transform: "rotate(180deg)" }}>
+                        <path d="M5 12h14M12 5l7 7-7 7" />
+                    </svg>
+                    Previous: Quick Start
+                </Link>
+                <Link
+                    href="/docs/cli"
+                    style={{
+                        display: "inline-flex",
+                        alignItems: "center",
+                        gap: "10px",
+                        color: "var(--text-primary)",
+                        textDecoration: "none",
+                        fontSize: "0.875rem",
+                        fontWeight: 600,
+                        padding: "10px 20px",
+                        borderRadius: "100px",
+                        background: "rgba(255,255,255,0.05)",
+                        border: "1px solid var(--border-muted)",
+                        transition: "all 0.2s ease",
+                    }}
+                    onMouseEnter={(e) => { e.currentTarget.style.background = "rgba(255,255,255,0.1)"; e.currentTarget.style.transform = "translateX(4px)"; }}
+                    onMouseLeave={(e) => { e.currentTarget.style.background = "rgba(255,255,255,0.05)"; e.currentTarget.style.transform = "translateX(0)"; }}
+                >
+                    Next: CLI Tools
+                    <IconArrowRight />
+                </Link>
+            </div>
         </DocLayout>
     );
 }

@@ -293,7 +293,6 @@ function Navbar() {
             ))}
           </div>
 
-          {/* Right: GitHub + CTA */}
           <div style={{ display: "flex", alignItems: "center", gap: "6px", flexShrink: 0 }}>
             <a
               href="https://github.com"
@@ -455,7 +454,7 @@ function HeroSection() {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            style={{ display: "flex", justifyContent: "center", marginBottom: "32px" }}
+            style={{ display: "flex", justifyContent: "center", marginBottom: "40px" }}
           >
             <div className="badge">
               <div className="badge-dot" />
@@ -688,10 +687,10 @@ function ArchitectureSection() {
     <section className="section-pad">
       <div className="container-main">
         <Reveal className="text-center" style={{ marginBottom: "72px" }}>
-          <div className="text-label" style={{ marginBottom: "16px" }}>Architecture</div>
-          <h2 className="text-headline" style={{ marginBottom: "16px" }}>Four layers. One standard.</h2>
-          <p className="text-body" style={{ maxWidth: "480px", margin: "0 auto" }}>
-            A clean separation of concerns that scales from a single service to a distributed system.
+          <div className="text-label" style={{ marginBottom: "16px" }}>The Science</div>
+          <h2 className="text-headline" style={{ marginBottom: "16px" }}>Strict layers. One standard.</h2>
+          <p className="text-body" style={{ maxWidth: "540px", margin: "0 auto" }}>
+            A deterministic separation of concerns that internalizes advanced engineering principles into a single, linear flow.
           </p>
         </Reveal>
 
@@ -787,10 +786,10 @@ function ArchitectureSection() {
               </div>
               <div style={{ padding: "24px" }}>
                 {[
-                  { label: "HTTP Request", layer: "Port Layer", color: "#58a6ff", arrow: true },
-                  { label: "Validated DTO", layer: "Flow Layer", color: "#bc8cff", arrow: true },
-                  { label: "Domain Query", layer: "Source Layer", color: "#3fb950", arrow: true },
-                  { label: "Mapped Response", layer: "Bridge Layer", color: "#e3b341", arrow: false },
+                  { label: "Incoming Request", layer: "Port Layer", color: "#58a6ff", arrow: true },
+                  { label: "Business Rules", layer: "Flow Layer", color: "#bc8cff", arrow: true },
+                  { label: "Data Access", layer: "Source Layer", color: "#3fb950", arrow: true },
+                  { label: "Response Map", layer: "Bridge Layer", color: "#e3b341", arrow: false },
                 ].map((item, i) => (
                   <div key={i}>
                     <div style={{
@@ -823,16 +822,14 @@ function FeaturesSection() {
     <section className="section-pad" style={{ background: "var(--bg-surface)", borderTop: "1px solid var(--border-muted)", borderBottom: "1px solid var(--border-muted)" }}>
       <div className="container-main">
         <Reveal className="text-center" style={{ marginBottom: "64px" }}>
-          <div className="text-label" style={{ marginBottom: "16px" }}>Why Core-Line</div>
-          <h2 className="text-headline" style={{ marginBottom: "16px" }}>Built for serious engineering teams</h2>
+          <div className="text-label" style={{ marginBottom: "16px" }}>Core Principles</div>
+          <h2 className="text-headline" style={{ marginBottom: "16px" }}>Engineered for absolute discipline</h2>
           <p className="text-body" style={{ maxWidth: "500px", margin: "0 auto" }}>
-            Every decision in Core-Line is optimized for long-term maintainability and team velocity.
+            Core-Line isn't just a style guide—it's a strict implementation of world-class engineering standards.
           </p>
         </Reveal>
 
-
         <div style={{ display: "grid", gridTemplateColumns: "repeat(12, 1fr)", gridTemplateRows: "auto", gap: "12px" }}>
-
           <Reveal delay={0} style={{ gridColumn: "span 5" }}>
             <div style={{
               background: "var(--bg-elevated)", border: "1px solid var(--border-muted)",
@@ -841,17 +838,16 @@ function FeaturesSection() {
             }}
               onMouseEnter={(e) => (e.currentTarget.style.borderColor = "var(--border-strong)")}
               onMouseLeave={(e) => (e.currentTarget.style.borderColor = "var(--border-muted)")}>
-              <div style={{ marginBottom: "16px", color: "var(--text-secondary)" }}><IconGlobe /></div>
-              <h3 className="text-title" style={{ marginBottom: "10px" }}>Language Agnostic</h3>
-              <p className="text-body" style={{ fontSize: "0.875rem" }}>Works with TypeScript, Go, Python, Java, C#, Rust — any language that supports structured programming.</p>
+              <div style={{ marginBottom: "16px", color: "var(--text-secondary)" }}><IconShieldCheck /></div>
+              <h3 className="text-title" style={{ marginBottom: "10px" }}>SOLID Enforcement</h3>
+              <p className="text-body" style={{ fontSize: "0.875rem" }}>Strict single-responsibility at the layer level. Port handle I/O, Flow handle logic, Source handle data. Always.</p>
               <div style={{ display: "flex", flexWrap: "wrap", gap: "6px", marginTop: "20px" }}>
-                {["TS", "Go", "Py", "Java", "C#", "Rust"].map(l => (
+                {["S", "O", "L", "I", "D"].map(l => (
                   <span key={l} style={{ padding: "3px 10px", borderRadius: "100px", fontSize: "0.6875rem", fontWeight: 600, background: "var(--bg-overlay)", border: "1px solid var(--border-default)", color: "var(--text-secondary)", fontFamily: "var(--font-jetbrains-mono), monospace" }}>{l}</span>
                 ))}
               </div>
             </div>
           </Reveal>
-
 
           <Reveal delay={0.08} style={{ gridColumn: "span 4" }}>
             <div style={{
@@ -862,14 +858,10 @@ function FeaturesSection() {
               onMouseEnter={(e) => (e.currentTarget.style.borderColor = "var(--border-strong)")}
               onMouseLeave={(e) => (e.currentTarget.style.borderColor = "var(--border-muted)")}>
               <div style={{ marginBottom: "16px", color: "var(--text-secondary)" }}><IconZap /></div>
-              <h3 className="text-title" style={{ marginBottom: "10px" }}>CLI Scaffolding</h3>
-              <p className="text-body" style={{ fontSize: "0.875rem" }}>Generate fully compliant module structures in seconds. Consistent output every time.</p>
-              <div style={{ marginTop: "20px", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: "0.75rem", color: "#79c0ff", background: "var(--bg-overlay)", borderRadius: "8px", padding: "10px 14px", border: "1px solid var(--border-muted)" }}>
-                $ cl generate module user
-              </div>
+              <h3 className="text-title" style={{ marginBottom: "10px" }}>CQRS-Native</h3>
+              <p className="text-body" style={{ fontSize: "0.875rem" }}>Feature-driven Flow structure naturally separates Commands from Queries, enabling independent scaling and clarity.</p>
             </div>
           </Reveal>
-
 
           <Reveal delay={0.12} style={{ gridColumn: "span 3" }}>
             <div style={{
@@ -880,11 +872,10 @@ function FeaturesSection() {
               onMouseEnter={(e) => (e.currentTarget.style.borderColor = "var(--border-strong)")}
               onMouseLeave={(e) => (e.currentTarget.style.borderColor = "var(--border-muted)")}>
               <div style={{ marginBottom: "16px", color: "var(--text-secondary)" }}><IconLockOpen /></div>
-              <h3 className="text-title" style={{ marginBottom: "10px" }}>Zero Lock-in</h3>
-              <p className="text-body" style={{ fontSize: "0.875rem" }}>Pure patterns, no runtime deps. Adopt freely.</p>
+              <h3 className="text-title" style={{ marginBottom: "10px" }}>12-Factor Ready</h3>
+              <p className="text-body" style={{ fontSize: "0.875rem" }}>Stateless flows and a dedicated Orbit layer ensure your system is cloud-native by default.</p>
             </div>
           </Reveal>
-
 
           <Reveal delay={0.15} style={{ gridColumn: "span 3" }}>
             <div style={{
@@ -894,12 +885,11 @@ function FeaturesSection() {
             }}
               onMouseEnter={(e) => (e.currentTarget.style.borderColor = "var(--border-strong)")}
               onMouseLeave={(e) => (e.currentTarget.style.borderColor = "var(--border-muted)")}>
-              <div style={{ marginBottom: "16px", color: "var(--text-secondary)" }}><IconUsers /></div>
-              <h3 className="text-title" style={{ marginBottom: "10px" }}>Team Consistency</h3>
-              <p className="text-body" style={{ fontSize: "0.875rem" }}>Shared vocabulary. Onboarding becomes trivial.</p>
+              <div style={{ marginBottom: "16px", color: "var(--text-secondary)" }}><IconGlobe /></div>
+              <h3 className="text-title" style={{ marginBottom: "10px" }}>Stack Agnostic</h3>
+              <p className="text-body" style={{ fontSize: "0.875rem" }}>The standard works in TS, Go, Python, or Rust. Use the tools you love with the structure you need.</p>
             </div>
           </Reveal>
-
 
           <Reveal delay={0.18} style={{ gridColumn: "span 5" }}>
             <div style={{
@@ -909,17 +899,14 @@ function FeaturesSection() {
             }}
               onMouseEnter={(e) => (e.currentTarget.style.borderColor = "var(--border-strong)")}
               onMouseLeave={(e) => (e.currentTarget.style.borderColor = "var(--border-muted)")}>
-              <div style={{ marginBottom: "16px", color: "var(--text-secondary)" }}><IconBeaker /></div>
-              <h3 className="text-title" style={{ marginBottom: "10px" }}>Testability First</h3>
-              <p className="text-body" style={{ fontSize: "0.875rem" }}>Each layer is independently testable. Unit, integration, and e2e tests become natural, not painful.</p>
-              <div style={{ display: "flex", gap: "8px", marginTop: "20px" }}>
-                {["Unit", "Integration", "E2E"].map(t => (
-                  <span key={t} style={{ padding: "4px 12px", borderRadius: "100px", fontSize: "0.75rem", background: "var(--bg-overlay)", border: "1px solid var(--border-default)", color: "var(--text-secondary)", fontFamily: "var(--font-jetbrains-mono), monospace" }}>{t}</span>
-                ))}
+              <div style={{ marginBottom: "16px", color: "var(--text-secondary)" }}><IconTerminal /></div>
+              <h3 className="text-title" style={{ marginBottom: "10px" }}>CLI-Enforced Discipline</h3>
+              <p className="text-body" style={{ fontSize: "0.875rem" }}>Generate modules that follow the standard perfectly. Automated Git hooks ensure zero-trust delivery excellence.</p>
+              <div style={{ marginTop: "20px", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: "0.75rem", color: "#79c0ff", background: "var(--bg-overlay)", borderRadius: "8px", padding: "10px 14px", border: "1px solid var(--border-muted)" }}>
+                $ npx cl-architecture init -y
               </div>
             </div>
           </Reveal>
-
 
           <Reveal delay={0.2} style={{ gridColumn: "span 4" }}>
             <div style={{
@@ -929,9 +916,9 @@ function FeaturesSection() {
             }}
               onMouseEnter={(e) => (e.currentTarget.style.borderColor = "var(--border-strong)")}
               onMouseLeave={(e) => (e.currentTarget.style.borderColor = "var(--border-muted)")}>
-              <div style={{ marginBottom: "16px", color: "var(--text-secondary)" }}><IconShieldCheck /></div>
-              <h3 className="text-title" style={{ marginBottom: "10px" }}>Production Proven</h3>
-              <p className="text-body" style={{ fontSize: "0.875rem" }}>Battle-tested in production systems. Designed for scale from day one.</p>
+              <div style={{ marginBottom: "16px", color: "var(--text-secondary)" }}><IconBeaker /></div>
+              <h3 className="text-title" style={{ marginBottom: "10px" }}>Zero Lock-in</h3>
+              <p className="text-body" style={{ fontSize: "0.875rem" }}>Pure architectural patterns. No heavy runtime dependencies. No proprietary decorators. Just clean code.</p>
             </div>
           </Reveal>
         </div>
