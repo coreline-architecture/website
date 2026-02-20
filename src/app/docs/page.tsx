@@ -26,7 +26,7 @@ export default function DocsPage() {
                         letterSpacing: "0.15rem",
                         textTransform: "uppercase" as const,
                         color: "var(--text-muted)",
-                        marginBottom: "12px",
+                        marginBottom: "16px",
                     }}>
                         Introduction
                     </div>
