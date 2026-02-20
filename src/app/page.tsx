@@ -232,7 +232,7 @@ function Navbar() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
         style={{
-          margin: "16px auto 0",
+          margin: "20px auto 0",
           maxWidth: "780px",
           padding: "0 20px",
           pointerEvents: "auto",
