@@ -716,7 +716,7 @@ function ArchitectureSection() {
                     style={{
                       display: "flex",
                       gap: "20px",
-                      padding: "20px 0",
+                      padding: "24px 0",
                       cursor: "default",
                       position: "relative",
                     }}
