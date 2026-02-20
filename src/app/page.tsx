@@ -1062,7 +1062,7 @@ function Footer() {
     <footer style={{
       borderTop: "1px solid var(--border-muted)",
       background: "var(--bg-surface)",
-      padding: "60px 0 40px",
+      padding: "68px 0 44px",
     }}>
       <div className="container-main">
         <div style={{ display: "grid", gridTemplateColumns: "2fr 1fr 1fr 1fr", gap: "48px", marginBottom: "48px" }}>
