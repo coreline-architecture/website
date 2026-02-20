@@ -958,7 +958,7 @@ function IntegrationsSection() {
                 key={i}
                 style={{
                   background: "var(--bg-elevated)",
-                  padding: "20px 16px",
+                  padding: "24px 16px",
                   textAlign: "center",
                   transition: "background 0.2s ease",
                   cursor: "default",
