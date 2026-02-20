@@ -686,7 +686,7 @@ function ArchitectureSection() {
   return (
     <section className="section-pad">
       <div className="container-main">
-        <Reveal className="text-center" style={{ marginBottom: "72px" }}>
+        <Reveal className="text-center" style={{ marginBottom: "80px" }}>
           <div className="text-label" style={{ marginBottom: "16px" }}>The Science</div>
           <h2 className="text-headline" style={{ marginBottom: "16px" }}>Strict layers. One standard.</h2>
           <p className="text-body" style={{ maxWidth: "540px", margin: "0 auto" }}>
