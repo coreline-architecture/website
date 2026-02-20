@@ -894,7 +894,7 @@ function FeaturesSection() {
           <Reveal delay={0.18} style={{ gridColumn: "span 5" }}>
             <div style={{
               background: "var(--bg-elevated)", border: "1px solid var(--border-muted)",
-              borderRadius: "14px", padding: "32px", height: "100%",
+              borderRadius: "14px", padding: "36px", height: "100%",
               transition: "border-color 0.2s ease",
             }}
               onMouseEnter={(e) => (e.currentTarget.style.borderColor = "var(--border-strong)")}
