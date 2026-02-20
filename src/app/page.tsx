@@ -488,7 +488,7 @@ function HeroSection() {
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.65, delay: 0.35 }}
-            style={{ maxWidth: "600px", margin: "0 auto 40px", fontSize: "1.0625rem", lineHeight: 1.75 }}
+            style={{ maxWidth: "600px", margin: "0 auto 48px", fontSize: "1.0625rem", lineHeight: 1.75 }}
           >
             Core-Line is a language-agnostic software architecture standard that brings
             clarity, consistency, and scalability to any codebase — from startup to enterprise.
