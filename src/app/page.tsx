@@ -993,7 +993,7 @@ function CTASection() {
               background: "var(--bg-surface)",
               border: "1px solid var(--border-default)",
               borderRadius: "20px",
-              padding: "80px 60px",
+              padding: "88px 64px",
               textAlign: "center",
               position: "relative",
               overflow: "hidden",
