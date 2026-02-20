@@ -599,8 +599,8 @@ function HeroSection() {
               <div style={{
                 display: "flex",
                 alignItems: "center",
-                gap: "2px",
-                padding: "8px 16px",
+                gap: "8px",
+                padding: "10px 16px",
                 borderBottom: "1px solid rgba(255, 255, 255, 0.05)",
                 background: "rgba(255, 255, 255, 0.01)",
                 overflowX: "auto",
