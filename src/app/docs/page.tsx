@@ -81,7 +81,7 @@ export default function DocsPage() {
                     flexDirection: "column",
                     alignItems: "center",
                     gap: "20px",
-                    marginBottom: "32px",
+                    marginBottom: "36px",
                     position: "relative",
                     overflow: "hidden",
                 }}>
