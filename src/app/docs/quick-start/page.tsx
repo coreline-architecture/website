@@ -93,7 +93,7 @@ function Step({ number, title, children }: { number: string; title: string; chil
                     fontSize: "1.25rem",
                     fontWeight: 600,
                     color: "var(--text-primary)",
-                    marginBottom: "16px",
+                    marginBottom: "18px",
                 }}>
                     {title}
                 </h3>
