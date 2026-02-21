@@ -196,7 +196,7 @@ function Sidebar({ mobile = false, onClose }: { mobile?: boolean; onClose?: () =
             flexShrink: 0,
             padding: mobile ? "20px" : "0",
         }}>
-            <div style={{ display: "flex", flexDirection: "column", gap: "32px" }}>
+            <div style={{ display: "flex", flexDirection: "column", gap: "36px" }}>
                 {sidebarGroups.map((group) => (
                     <div key={group.title}>
                         <div style={{
