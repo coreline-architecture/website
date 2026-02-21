@@ -278,7 +278,7 @@ export function DocLayout({ children }: { children: React.ReactNode }) {
                 margin: "0 auto",
                 padding: "84px 32px 64px",
                 display: "flex",
-                gap: "48px",
+                gap: "52px",
             }}>
                 {/* Desktop sidebar */}
                 <div style={{
