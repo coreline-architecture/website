@@ -178,7 +178,7 @@ export default function QuickStartPage() {
 
                 <Step number="03" title="Initialize & Name">
                     <p style={{ marginBottom: "20px" }}>During initialization, you will be asked to choose a naming style. This handles the automated folder generation.</p>
-                    <div style={{ padding: "24px", borderRadius: "16px", background: "var(--bg-elevated)", border: "1px solid var(--border-muted)" }}>
+                    <div style={{ padding: "28px", borderRadius: "16px", background: "var(--bg-elevated)", border: "1px solid var(--border-muted)" }}>
                         <div style={{ display: "flex", gap: "24px" }}>
                             <div style={{ flex: 1 }}>
                                 <div style={{ fontSize: "0.8125rem", fontWeight: 600, color: "var(--text-primary)", marginBottom: "4px" }}>Core-Line Terminology</div>
