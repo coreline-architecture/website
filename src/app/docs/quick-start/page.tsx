@@ -212,8 +212,8 @@ export default function QuickStartPage() {
             </section>
 
             <div style={{
-                marginTop: "64px",
-                paddingTop: "32px",
+                marginTop: "72px",
+                paddingTop: "36px",
                 borderTop: "1px solid var(--border-muted)",
                 display: "flex",
                 justifyContent: "space-between",
