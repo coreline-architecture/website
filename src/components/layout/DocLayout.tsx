@@ -276,7 +276,7 @@ export function DocLayout({ children }: { children: React.ReactNode }) {
             <div style={{
                 maxWidth: "1200px",
                 margin: "0 auto",
-                padding: "80px 32px 60px",
+                padding: "84px 32px 64px",
                 display: "flex",
                 gap: "48px",
             }}>
