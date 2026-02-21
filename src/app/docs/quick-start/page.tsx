@@ -39,7 +39,7 @@ function CodeBlock({ command }: { command: string }) {
             alignItems: "center",
             justifyContent: "space-between",
             gap: "12px",
-            padding: "12px 20px",
+            padding: "14px 20px",
             borderRadius: "12px",
             background: "rgba(255, 255, 255, 0.03)",
             border: "1px solid var(--border-muted)",
