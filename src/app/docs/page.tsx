@@ -161,10 +161,10 @@ export default function DocsPage() {
                                     onMouseEnter={(e) => (e.currentTarget.style.background = "rgba(255,255,255,0.02)")}
                                     onMouseLeave={(e) => (e.currentTarget.style.background = "transparent")}
                                 >
-                                    <td style={{ padding: "16px 24px", color: "var(--text-faint)", fontWeight: 600, fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: "0.75rem" }}>{row.layer}</td>
-                                    <td style={{ padding: "16px 24px", color: "var(--text-primary)", fontWeight: 600 }}>{row.cl}</td>
-                                    <td style={{ padding: "16px 24px", color: "var(--text-secondary)" }}>{row.std}</td>
-                                    <td style={{ padding: "16px 24px", color: "var(--text-muted)", fontSize: "0.8125rem" }}>{row.role}</td>
+                                    <td style={{ padding: "18px 24px", color: "var(--text-faint)", fontWeight: 600, fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: "0.75rem" }}>{row.layer}</td>
+                                    <td style={{ padding: "18px 24px", color: "var(--text-primary)", fontWeight: 600 }}>{row.cl}</td>
+                                    <td style={{ padding: "18px 24px", color: "var(--text-secondary)" }}>{row.std}</td>
+                                    <td style={{ padding: "18px 24px", color: "var(--text-muted)", fontSize: "0.8125rem" }}>{row.role}</td>
                                 </tr>
                             ))}
                         </tbody>
