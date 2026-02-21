@@ -287,7 +287,7 @@ export function DocLayout({ children }: { children: React.ReactNode }) {
                     height: "calc(100vh - 100px)",
                     overflowY: "auto",
                     borderRight: "1px solid var(--border-muted)",
-                    paddingRight: "24px",
+                    paddingRight: "28px",
                 }}
                     className="docs-sidebar-desktop"
                 >
