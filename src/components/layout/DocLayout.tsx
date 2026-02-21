@@ -283,7 +283,7 @@ export function DocLayout({ children }: { children: React.ReactNode }) {
                 {/* Desktop sidebar */}
                 <div style={{
                     position: "sticky",
-                    top: "80px",
+                    top: "84px",
                     height: "calc(100vh - 100px)",
                     overflowY: "auto",
                     borderRight: "1px solid var(--border-muted)",
