@@ -73,7 +73,7 @@ export default function DocsPage() {
                     background: "rgba(255, 255, 255, 0.02)",
                     border: "1px solid var(--border-muted)",
                     borderRadius: "16px",
-                    padding: "40px",
+                    padding: "44px",
                     fontFamily: "var(--font-jetbrains-mono), monospace",
                     fontSize: "0.875rem",
                     color: "var(--text-primary)",
