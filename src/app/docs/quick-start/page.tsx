@@ -164,7 +164,7 @@ export default function QuickStartPage() {
 
                 <Step number="02" title="Installation Methods">
                     <p style={{ marginBottom: "20px" }}>Choose the installation method that fits your workflow. <strong>npx</strong> is recommended for most users.</p>
-                    <div style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
+                    <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
                         <div>
                             <div style={{ fontSize: "0.75rem", color: "var(--text-faint)", fontWeight: 600, marginBottom: "8px", textTransform: "uppercase" }}>Option 1: npx (No Install)</div>
                             <CodeBlock command="npx cl-architecture init" />
