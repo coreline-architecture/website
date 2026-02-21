@@ -216,7 +216,7 @@ export default function DocsPage() {
                 }}>
                     Comparison
                 </h2>
-                <div style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
+                <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
                     {[
                         { vs: "MVC", desc: "MVC allows logic to spread into models and controllers indiscriminately. CL forces logic into the Flow layer only." },
                         { vs: "Clean Architecture", desc: "While sharing goals, CL is more opinionated on the exact file structure and layer interaction rules." },
