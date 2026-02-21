@@ -53,7 +53,7 @@ export default function DocsPage() {
                 </motion.div>
             </div>
 
-            <section style={{ marginBottom: "80px" }}>
+            <section style={{ marginBottom: "88px" }}>
                 <h2 style={{
                     fontSize: "1.5rem",
                     fontWeight: 600,
