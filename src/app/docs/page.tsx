@@ -139,10 +139,10 @@ export default function DocsPage() {
                     }}>
                         <thead>
                             <tr style={{ background: "rgba(255, 255, 255, 0.03)", borderBottom: "1px solid var(--border-muted)" }}>
-                                <th style={{ padding: "16px 24px", color: "var(--text-muted)", fontWeight: 600, fontSize: "0.75rem", textTransform: "uppercase", letterSpacing: "0.05em" }}>Layer</th>
-                                <th style={{ padding: "16px 24px", color: "var(--text-primary)", fontWeight: 600, fontSize: "0.75rem", textTransform: "uppercase", letterSpacing: "0.05em" }}>Core-Line Term</th>
-                                <th style={{ padding: "16px 24px", color: "var(--text-secondary)", fontWeight: 600, fontSize: "0.75rem", textTransform: "uppercase", letterSpacing: "0.05em" }}>Industry Standard</th>
-                                <th style={{ padding: "16px 24px", color: "var(--text-muted)", fontWeight: 400, fontSize: "0.75rem", textTransform: "uppercase", letterSpacing: "0.05em" }}>Role</th>
+                                <th style={{ padding: "18px 24px", color: "var(--text-muted)", fontWeight: 600, fontSize: "0.75rem", textTransform: "uppercase", letterSpacing: "0.05em" }}>Layer</th>
+                                <th style={{ padding: "18px 24px", color: "var(--text-primary)", fontWeight: 600, fontSize: "0.75rem", textTransform: "uppercase", letterSpacing: "0.05em" }}>Core-Line Term</th>
+                                <th style={{ padding: "18px 24px", color: "var(--text-secondary)", fontWeight: 600, fontSize: "0.75rem", textTransform: "uppercase", letterSpacing: "0.05em" }}>Industry Standard</th>
+                                <th style={{ padding: "18px 24px", color: "var(--text-muted)", fontWeight: 400, fontSize: "0.75rem", textTransform: "uppercase", letterSpacing: "0.05em" }}>Role</th>
                             </tr>
                         </thead>
                         <tbody>
