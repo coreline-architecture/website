@@ -195,7 +195,7 @@ export default function QuickStartPage() {
                 <Step number="04" title="Verify Structure">
                     <p style={{ marginBottom: "20px" }}>After running <code>init</code>, your project will have the following verified base structure:</p>
                     <div style={{
-                        padding: "20px",
+                        padding: "24px",
                         borderRadius: "12px",
                         background: "#0d1117",
                         border: "1px solid var(--border-muted)",
