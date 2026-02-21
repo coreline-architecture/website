@@ -222,7 +222,7 @@ export default function DocsPage() {
                         { vs: "Clean Architecture", desc: "While sharing goals, CL is more opinionated on the exact file structure and layer interaction rules." },
                         { vs: "Framework-Specific", desc: "Most architectures are tied to a framework's magic. CL is 100% framework-agnostic." }
                     ].map((item, i) => (
-                        <div key={i} style={{ display: "flex", gap: "24px", padding: "16px 0", borderBottom: i === 2 ? "none" : "1px solid var(--border-muted)" }}>
+                        <div key={i} style={{ display: "flex", gap: "28px", padding: "18px 0", borderBottom: i === 2 ? "none" : "1px solid var(--border-muted)" }}>
                             <div style={{ width: "140px", flexShrink: 0, fontWeight: 600, color: "var(--text-secondary)", fontSize: "0.875rem" }}>vs {item.vs}</div>
                             <div style={{ color: "var(--text-muted)", fontSize: "0.875rem", lineHeight: 1.6 }}>{item.desc}</div>
                         </div>
