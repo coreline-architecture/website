@@ -64,7 +64,7 @@ export default function DocsPage() {
                 }}>
                     The Core-Line Concept
                 </h2>
-                <p style={{ color: "var(--text-secondary)", marginBottom: "32px", lineHeight: "1.8", fontSize: "1rem" }}>
+                <p style={{ color: "var(--text-secondary)", marginBottom: "36px", lineHeight: "1.8", fontSize: "1rem" }}>
                     At the heart of CL-Architecture is a simple, non-negotiable rule:
                     <strong style={{ color: "var(--text-primary)" }}> Every request must follow one clear, linear path.</strong>
                 </p>
