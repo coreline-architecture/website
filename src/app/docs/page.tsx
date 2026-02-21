@@ -122,7 +122,7 @@ export default function DocsPage() {
                 }}>
                     Naming Styles
                 </h2>
-                <p style={{ color: "var(--text-secondary)", marginBottom: "32px", lineHeight: "1.8" }}>
+                <p style={{ color: "var(--text-secondary)", marginBottom: "36px", lineHeight: "1.8" }}>
                     CL-Architecture is about discipline, not just vocabulary. You can use our specialized naming or traditional industry terms.
                 </p>
                 <div style={{
