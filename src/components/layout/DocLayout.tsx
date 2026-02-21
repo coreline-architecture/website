@@ -213,7 +213,7 @@ function Sidebar({ mobile = false, onClose }: { mobile?: boolean; onClose?: () =
                             <span style={{ opacity: 0.6 }}>{group.icon}</span>
                             {group.title}
                         </div>
-                        <div style={{ display: "flex", flexDirection: "column", gap: "2px" }}>
+                        <div style={{ display: "flex", flexDirection: "column", gap: "4px" }}>
                             {group.items.map((item) => {
                                 const isActive = pathname === item.href;
                                 return (
