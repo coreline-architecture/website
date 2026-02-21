@@ -69,7 +69,7 @@ function CodeBlock({ command }: { command: string }) {
 
 function Step({ number, title, children }: { number: string; title: string; children: React.ReactNode }) {
     return (
-        <div style={{ display: "flex", gap: "32px", marginBottom: "48px" }}>
+        <div style={{ display: "flex", gap: "36px", marginBottom: "52px" }}>
             <div style={{
                 width: "40px",
                 height: "40px",
