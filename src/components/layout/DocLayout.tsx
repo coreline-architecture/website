@@ -207,7 +207,7 @@ function Sidebar({ mobile = false, onClose }: { mobile?: boolean; onClose?: () =
                             letterSpacing: "0.15em",
                             textTransform: "uppercase" as const,
                             color: "var(--text-faint)",
-                            marginBottom: "12px",
+                            marginBottom: "16px",
                             padding: "0 10px",
                         }}>
                             <span style={{ opacity: 0.6 }}>{group.icon}</span>
