@@ -182,7 +182,7 @@ export default function DocsPage() {
                 }}>
                     Architecture Philosophy
                 </h2>
-                <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: "24px" }}>
+                <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: "28px" }}>
                     {[
                         { title: "Discipline over Freedom", text: "Freedom leads to inconsistency. Strict rules lead to maintainable systems that scale predictably." },
                         { title: "Explicit over Implicit", text: "No magic, no hidden logic, and no automatic dependency injection that obscures the flow." },
