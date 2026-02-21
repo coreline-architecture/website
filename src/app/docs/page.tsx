@@ -190,7 +190,7 @@ export default function DocsPage() {
                         { title: "Consistency over Flexibility", text: "A team is only as fast as its slowest newcomer. Consistency ensures instant onboarding." }
                     ].map((item, i) => (
                         <div key={i} style={{
-                            padding: "32px",
+                            padding: "36px",
                             borderRadius: "16px",
                             background: "rgba(255, 255, 255, 0.02)",
                             border: "1px solid var(--border-muted)",
