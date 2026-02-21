@@ -225,7 +225,7 @@ function Sidebar({ mobile = false, onClose }: { mobile?: boolean; onClose?: () =
                                             display: "flex",
                                             alignItems: "center",
                                             justifyContent: "space-between",
-                                            padding: "8px 12px",
+                                            padding: "10px 14px",
                                             borderRadius: "8px",
                                             fontSize: "0.8125rem",
                                             fontWeight: isActive ? 600 : 400,
