@@ -111,10 +111,10 @@ export default function StandardsPage() {
                 <div style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
                     {[
                         { s: "S", title: "Single Responsibility", desc: "Every layer has exactly one job. Port handles I/O, Flow handles logic, Source handles data." },
-                        { s: "O", title: "Open/Closed", desc: "Features are added by creating new Flows. Logic is open for extension but closed for modification." },
-                        { s: "L", title: "Liskov Substitution", desc: "Source interfaces allow any implementation (Mock, DB, API) to be swapped without breaking the Flow." },
-                        { s: "I", title: "Interface Segregation", desc: "Modules are self-contained. Interfaces are scoped to business contexts, preventing dependency leakage." },
-                        { s: "D", title: "Dependency Inversion", desc: "The Core-Line law ensures business logic (Flow) never depends on technical details (DB/SDK)." },
+                        { s: "O", title: "Open/Closed", desc: "New features are added by creating new Flows, not by modifying existing logic. Open for extension, closed for modification." },
+                        { s: "L", title: "Liskov Substitution", desc: "By using interfaces in Source and Link layers, any implementation (Mock, DB, or SDK) can be substituted without breaking the Flow." },
+                        { s: "I", title: "Interface Segregation", desc: "Modules are self-contained. Interfaces are scoped to specific business contexts, ensuring a module only knows what it needs to know." },
+                        { s: "D", title: "Dependency Inversion", desc: "The Core-Line law ensures high-level business logic (Flow) never depends on low-level technical details (DB/SDK)." },
                     ].map((item, i) => (
                         <div key={i} style={{ display: "flex", gap: "24px", padding: "20px", borderRadius: "12px", border: "1px solid var(--border-muted)", background: "rgba(255,255,255,0.01)" }}>
                             <div style={{

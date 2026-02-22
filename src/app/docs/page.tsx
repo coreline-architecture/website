@@ -151,6 +151,7 @@ export default function DocsPage() {
                                 { layer: "Logic", cl: "Flow", std: "Service / Use Case", role: "Business logic & orchestration" },
                                 { layer: "Data", cl: "Source", std: "Repository", role: "Data access & external I/O" },
                                 { layer: "DTO", cl: "Bridge", std: "DTO / Mapper", role: "Data transformation" },
+                                { layer: "Vendor", cl: "Link", std: "Provider", role: "External library/SDK wrappers" },
                                 { layer: "Policy", cl: "Rule", std: "Validation / Guard", role: "Input & state validation" },
                                 { layer: "Entity", cl: "Shape", std: "Model / Entity", role: "Core data structures" },
                             ].map((row, i, arr) => (

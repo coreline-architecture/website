@@ -158,9 +158,9 @@ const layers = [
   },
   {
     id: "04",
-    name: "Bridge Layer",
-    role: "Transformation",
-    description: "Bidirectional data mapping between layers. Keeps each layer's data model independent and decoupled.",
+    name: "Link Layer",
+    role: "External Integration",
+    description: "Isolated wrapper for all third-party SDKs and external APIs. Protects the core logic from vendor lock-in.",
     icon: <IconLayers />,
   },
 ];
@@ -350,7 +350,7 @@ const heroStacks = [
       { prompt: false, text: "  src/modules/user/user.port.ts", color: "#e3b341" },
       { prompt: false, text: "  src/modules/user/user.flow.ts", color: "#e3b341" },
       { prompt: false, text: "  src/modules/user/user.source.ts", color: "#e3b341" },
-      { prompt: false, text: "  src/modules/user/user.bridge.ts", color: "#e3b341" },
+      { prompt: false, text: "  src/modules/user/user.link.ts", color: "#e3b341" },
     ],
   },
   {
@@ -365,7 +365,7 @@ const heroStacks = [
       { prompt: false, text: "  internal/user/user_port.go", color: "#e3b341" },
       { prompt: false, text: "  internal/user/user_flow.go", color: "#e3b341" },
       { prompt: false, text: "  internal/user/user_source.go", color: "#e3b341" },
-      { prompt: false, text: "  internal/user/user_bridge.go", color: "#e3b341" },
+      { prompt: false, text: "  internal/user/user_link.go", color: "#e3b341" },
     ],
   },
   {
@@ -380,7 +380,7 @@ const heroStacks = [
       { prompt: false, text: "  src/user/user_port.py", color: "#e3b341" },
       { prompt: false, text: "  src/user/user_flow.py", color: "#e3b341" },
       { prompt: false, text: "  src/user/user_source.py", color: "#e3b341" },
-      { prompt: false, text: "  src/user/user_bridge.py", color: "#e3b341" },
+      { prompt: false, text: "  src/user/user_link.py", color: "#e3b341" },
     ],
   },
   {
@@ -395,7 +395,7 @@ const heroStacks = [
       { prompt: false, text: "  src/.../UserPort.java", color: "#e3b341" },
       { prompt: false, text: "  src/.../UserFlow.java", color: "#e3b341" },
       { prompt: false, text: "  src/.../UserSource.java", color: "#e3b341" },
-      { prompt: false, text: "  src/.../UserBridge.java", color: "#e3b341" },
+      { prompt: false, text: "  src/.../UserLink.java", color: "#e3b341" },
     ],
   },
   {
@@ -410,7 +410,7 @@ const heroStacks = [
       { prompt: false, text: "  src/user/port.rs", color: "#e3b341" },
       { prompt: false, text: "  src/user/flow.rs", color: "#e3b341" },
       { prompt: false, text: "  src/user/source.rs", color: "#e3b341" },
-      { prompt: false, text: "  src/user/bridge.rs", color: "#e3b341" },
+      { prompt: false, text: "  src/user/link.rs", color: "#e3b341" },
     ],
   },
 ];
@@ -789,7 +789,7 @@ function ArchitectureSection() {
                   { label: "Incoming Request", layer: "Port Layer", color: "#58a6ff", arrow: true },
                   { label: "Business Rules", layer: "Flow Layer", color: "#bc8cff", arrow: true },
                   { label: "Data Access", layer: "Source Layer", color: "#3fb950", arrow: true },
-                  { label: "Response Map", layer: "Bridge Layer", color: "#e3b341", arrow: false },
+                  { label: "External Vendor", layer: "Link Layer", color: "#e3b341", arrow: false },
                 ].map((item, i) => (
                   <div key={i}>
                     <div style={{
