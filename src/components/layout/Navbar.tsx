@@ -62,11 +62,11 @@ export function Navbar() {
                 <Link
                     href="/docs/quick-start"
                     style={{
-                        padding: "7px 18px",
+                        padding: "6px 14px",
                         borderRadius: "100px",
                         background: "var(--text-primary)",
                         color: "var(--bg-base)",
-                        fontSize: "0.8125rem",
+                        fontSize: "0.75rem",
                         fontWeight: 600,
                         textDecoration: "none",
                         transition: "all 0.2s ease",

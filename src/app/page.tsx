@@ -313,14 +313,14 @@ function Navbar() {
               href="/docs/quick-start"
               style={{
                 display: "inline-flex", alignItems: "center", gap: "6px",
-                padding: "7px 16px",
+                padding: "6px 14px",
                 borderRadius: "100px",
                 background: "var(--text-primary)",
                 color: "var(--bg-base)",
-                fontSize: "0.8125rem",
+                fontSize: "0.75rem",
                 fontWeight: 600,
                 textDecoration: "none",
-                transition: "background 0.2s ease, transform 0.15s ease",
+                transition: "all 0.2s ease",
                 whiteSpace: "nowrap",
               }}
               onMouseEnter={(e) => { e.currentTarget.style.background = "#f0f6fc"; e.currentTarget.style.transform = "scale(1.03)"; }}
