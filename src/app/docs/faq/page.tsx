@@ -138,7 +138,7 @@ export default function FaqPage() {
             }}>
                 <p style={{ color: "var(--text-muted)", fontSize: "0.875rem", marginBottom: "16px" }}>Have more questions?</p>
                 <a
-                    href="https://github.com"
+                    href="https://github.com/coreline-architecture"
                     target="_blank"
                     rel="noreferrer"
                     style={{

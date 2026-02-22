@@ -295,7 +295,7 @@ function Navbar() {
 
           <div style={{ display: "flex", alignItems: "center", gap: "6px", flexShrink: 0 }}>
             <a
-              href="https://github.com"
+              href="https://github.com/coreline-architecture"
               target="_blank"
               rel="noreferrer"
               style={{
@@ -357,7 +357,7 @@ const heroStacks = [
     id: "go",
     label: "Go",
     lines: [
-      { prompt: true, text: "go install github.com/core-line/cli@latest", color: "#79c0ff" },
+      { prompt: true, text: "go install github.com/coreline-architecture/cli@latest", color: "#79c0ff" },
       { prompt: false, text: "  CLI installed successfully", color: "#8b949e" },
       { prompt: true, text: "cl init my-service", color: "#79c0ff" },
       { prompt: false, text: "  Go module structure generated", color: "#8b949e" },
@@ -1090,7 +1090,7 @@ function Footer() {
               A language-agnostic software architecture standard for modern engineering teams.
             </p>
             <a
-              href="https://github.com"
+              href="https://github.com/coreline-architecture"
               target="_blank"
               rel="noreferrer"
               style={{
