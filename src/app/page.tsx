@@ -1203,7 +1203,7 @@ function Footer() {
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: "12px" }}>
           <p className="text-caption">© 2026 Core-Line Architecture. All rights reserved.</p>
           <p className="text-caption" style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: "0.6875rem" }}>
-            Port → Flow → Source → Bridge
+            Port → Flow → Source → Link
           </p>
         </div>
       </div>
