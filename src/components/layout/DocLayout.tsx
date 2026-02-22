@@ -200,20 +200,18 @@ function Sidebar({ mobile = false, onClose }: { mobile?: boolean; onClose?: () =
                 {sidebarGroups.map((group) => (
                     <div key={group.title}>
                         <div style={{
-                            display: "flex", alignItems: "center", gap: "10px",
                             fontFamily: "var(--font-jetbrains-mono), monospace",
-                            fontSize: "0.625rem",
-                            fontWeight: 600,
-                            letterSpacing: "0.15em",
+                            fontSize: "0.6875rem",
+                            fontWeight: 700,
+                            letterSpacing: "0.1em",
                             textTransform: "uppercase" as const,
                             color: "var(--text-faint)",
-                            marginBottom: "16px",
-                            padding: "0 10px",
+                            marginBottom: "12px",
+                            padding: "0 14px",
                         }}>
-                            <span style={{ opacity: 0.6 }}>{group.icon}</span>
                             {group.title}
                         </div>
-                        <div style={{ display: "flex", flexDirection: "column", gap: "4px" }}>
+                        <div style={{ display: "flex", flexDirection: "column", gap: "2px" }}>
                             {group.items.map((item) => {
                                 const isActive = pathname === item.href;
                                 return (
@@ -222,24 +220,22 @@ function Sidebar({ mobile = false, onClose }: { mobile?: boolean; onClose?: () =
                                         href={item.href}
                                         onClick={onClose}
                                         style={{
+                                            position: "relative",
                                             display: "flex",
                                             alignItems: "center",
                                             justifyContent: "space-between",
-                                            padding: "10px 14px",
-                                            borderRadius: "8px",
-                                            fontSize: "0.8125rem",
-                                            fontWeight: isActive ? 600 : 400,
+                                            padding: "8px 14px",
+                                            borderRadius: "6px",
+                                            fontSize: "0.875rem",
+                                            fontWeight: isActive ? 500 : 400,
                                             color: isActive ? "var(--text-primary)" : "var(--text-muted)",
-                                            background: isActive ? "rgba(255, 255, 255, 0.03)" : "transparent",
+                                            background: isActive ? "rgba(255, 255, 255, 0.04)" : "transparent",
                                             textDecoration: "none",
-                                            transition: "all 0.2s cubic-bezier(0.4, 0, 0.2, 1)",
-                                            border: "1px solid",
-                                            borderColor: isActive ? "rgba(255, 255, 255, 0.05)" : "transparent",
-                                            boxShadow: isActive ? "0 4px 12px rgba(0,0,0,0.1)" : "none",
+                                            transition: "all 0.15s ease",
                                         }}
                                         onMouseEnter={(e) => {
                                             if (!isActive) {
-                                                e.currentTarget.style.color = "var(--text-secondary)";
+                                                e.currentTarget.style.color = "var(--text-primary)";
                                                 e.currentTarget.style.background = "rgba(255, 255, 255, 0.02)";
                                             }
                                         }}
@@ -250,12 +246,21 @@ function Sidebar({ mobile = false, onClose }: { mobile?: boolean; onClose?: () =
                                             }
                                         }}
                                     >
-                                        {item.label}
+                                        <span style={{ position: "relative", zIndex: 1 }}>{item.label}</span>
                                         {isActive && (
-                                            <motion.div layoutId="active-indicator">
-                                                <IconChevron />
-                                            </motion.div>
+                                            <motion.div
+                                                layoutId="active-marker"
+                                                style={{
+                                                    position: "absolute",
+                                                    left: "-28px",
+                                                    width: "2px",
+                                                    height: "16px",
+                                                    background: "var(--text-primary)",
+                                                    borderRadius: "0 2px 2px 0",
+                                                }}
+                                            />
                                         )}
+                                        {isActive && <IconChevron />}
                                     </Link>
                                 );
                             })}
