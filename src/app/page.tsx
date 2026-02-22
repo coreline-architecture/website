@@ -511,23 +511,20 @@ function HeroSection() {
               fontWeight: 600,
               textDecoration: "none",
               transition: "all 0.3s cubic-bezier(0.22, 1, 0.36, 1)",
-              boxShadow: "0 4px 20px rgba(255, 255, 255, 0.15)",
             }}
               onMouseEnter={(e) => {
                 e.currentTarget.style.background = "#fff";
                 e.currentTarget.style.transform = "translateY(-2px) scale(1.02)";
-                e.currentTarget.style.boxShadow = "0 8px 30px rgba(255, 255, 255, 0.25)";
               }}
               onMouseLeave={(e) => {
                 e.currentTarget.style.background = "var(--text-primary)";
                 e.currentTarget.style.transform = "translateY(0) scale(1)";
-                e.currentTarget.style.boxShadow = "0 4px 20px rgba(255, 255, 255, 0.15)";
               }}
             >
               Get Started <IconArrow />
             </Link>
             <a
-              href="https://github.com"
+              href="https://github.com/coreline-architecture/standard"
               target="_blank"
               rel="noreferrer"
               style={{
@@ -1174,7 +1171,7 @@ function Footer() {
             <div className="text-label" style={{ marginBottom: "16px" }}>Community</div>
             <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
               {[
-                { label: "GitHub", href: "#" },
+                { label: "GitHub", href: "https://github.com/coreline-architecture" },
                 { label: "Discord", href: "#" },
                 { label: "Twitter / X", href: "#" },
                 { label: "Discussions", href: "#" },

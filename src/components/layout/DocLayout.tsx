@@ -150,7 +150,7 @@ function DocsNavbar() {
 
                 <div style={{ display: "flex", alignItems: "center", gap: "6px" }}>
                     <a
-                        href="https://github.com"
+                        href="https://github.com/coreline-architecture"
                         target="_blank"
                         rel="noreferrer"
                         style={{
