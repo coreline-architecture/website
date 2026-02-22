@@ -499,57 +499,64 @@ function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.5 }}
-            style={{ display: "flex", gap: "12px", justifyContent: "center", flexWrap: "wrap", marginBottom: "72px", alignItems: "center" }}
+            style={{ display: "flex", gap: "16px", justifyContent: "center", flexWrap: "wrap", marginBottom: "72px", alignItems: "center" }}
           >
             <Link href="/docs/quick-start" style={{
-              display: "inline-flex", alignItems: "center", gap: "6px",
-              padding: "9px 20px",
+              display: "inline-flex", alignItems: "center", gap: "10px",
+              padding: "12px 28px",
               borderRadius: "100px",
               background: "var(--text-primary)",
               color: "var(--bg-base)",
-              fontSize: "0.875rem",
+              fontSize: "0.9375rem",
               fontWeight: 600,
               textDecoration: "none",
-              transition: "all 0.2s ease",
+              transition: "all 0.3s cubic-bezier(0.22, 1, 0.36, 1)",
+              boxShadow: "0 4px 20px rgba(255, 255, 255, 0.15)",
             }}
-              onMouseEnter={(e) => { e.currentTarget.style.background = "#f0f6fc"; e.currentTarget.style.transform = "translateY(-1px)"; }}
-              onMouseLeave={(e) => { e.currentTarget.style.background = "var(--text-primary)"; e.currentTarget.style.transform = "translateY(0)"; }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.background = "#fff";
+                e.currentTarget.style.transform = "translateY(-2px) scale(1.02)";
+                e.currentTarget.style.boxShadow = "0 8px 30px rgba(255, 255, 255, 0.25)";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.background = "var(--text-primary)";
+                e.currentTarget.style.transform = "translateY(0) scale(1)";
+                e.currentTarget.style.boxShadow = "0 4px 20px rgba(255, 255, 255, 0.15)";
+              }}
             >
-              Start Building <IconArrow />
+              Get Started <IconArrow />
             </Link>
-            <Link href="/docs" style={{
-              display: "inline-flex", alignItems: "center", gap: "6px",
-              padding: "8px 18px",
-              borderRadius: "100px",
-              background: "transparent",
-              color: "var(--text-secondary)",
-              fontSize: "0.875rem",
-              fontWeight: 500,
-              textDecoration: "none",
-              border: "1px solid var(--border-default)",
-              transition: "all 0.2s ease",
-            }}
-              onMouseEnter={(e) => { e.currentTarget.style.borderColor = "var(--border-strong)"; e.currentTarget.style.color = "var(--text-primary)"; }}
-              onMouseLeave={(e) => { e.currentTarget.style.borderColor = "var(--border-default)"; e.currentTarget.style.color = "var(--text-secondary)"; }}
+            <a
+              href="https://github.com"
+              target="_blank"
+              rel="noreferrer"
+              style={{
+                display: "inline-flex", alignItems: "center", gap: "10px",
+                padding: "11px 26px",
+                borderRadius: "100px",
+                background: "rgba(255, 255, 255, 0.03)",
+                color: "var(--text-secondary)",
+                fontSize: "0.9375rem",
+                fontWeight: 500,
+                textDecoration: "none",
+                border: "1px solid var(--border-muted)",
+                transition: "all 0.3s cubic-bezier(0.22, 1, 0.36, 1)",
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.borderColor = "var(--border-strong)";
+                e.currentTarget.style.color = "var(--text-primary)";
+                e.currentTarget.style.background = "rgba(255, 255, 255, 0.08)";
+                e.currentTarget.style.transform = "translateY(-2px)";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.borderColor = "var(--border-muted)";
+                e.currentTarget.style.color = "var(--text-secondary)";
+                e.currentTarget.style.background = "rgba(255, 255, 255, 0.03)";
+                e.currentTarget.style.transform = "translateY(0)";
+              }}
             >
-              Documentation
-            </Link>
-            <Link href="/docs" style={{
-              display: "inline-flex", alignItems: "center", gap: "6px",
-              padding: "8px 18px",
-              borderRadius: "100px",
-              background: "transparent",
-              color: "var(--text-muted)",
-              fontSize: "0.875rem",
-              fontWeight: 500,
-              textDecoration: "none",
-              transition: "color 0.2s ease",
-            }}
-              onMouseEnter={(e) => { e.currentTarget.style.color = "var(--text-primary)"; }}
-              onMouseLeave={(e) => { e.currentTarget.style.color = "var(--text-muted)"; }}
-            >
-              View on GitHub
-            </Link>
+              <IconGitHub /> View on GitHub
+            </a>
           </motion.div>
 
 
