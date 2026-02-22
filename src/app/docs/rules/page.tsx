@@ -136,6 +136,40 @@ export default function RulesPage() {
                     color: "var(--text-primary)",
                     fontFamily: "var(--font-poppins), sans-serif",
                 }}>
+                    Development Discipline
+                </h2>
+                <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: "24px", marginBottom: "32px" }}>
+                    <div style={{ padding: "32px", borderRadius: "16px", background: "rgba(255, 255, 255, 0.02)", border: "1px solid var(--border-muted)" }}>
+                        <h4 style={{ color: "var(--text-primary)", fontSize: "1rem", fontWeight: 600, marginBottom: "16px", fontFamily: "var(--font-poppins), sans-serif" }}>Atomic Commits (Rule 13)</h4>
+                        <p style={{ color: "var(--text-muted)", fontSize: "0.875rem", lineHeight: 1.7, marginBottom: "16px" }}>
+                            Every change must be a single, trackable logical unit using the Conventional Commits format.
+                        </p>
+                        <ul style={{ color: "var(--text-faint)", fontSize: "0.8125rem", paddingLeft: "18px", margin: 0 }}>
+                            <li style={{ marginBottom: "8px" }}>Force consistency via automated Git hooks.</li>
+                            <li style={{ marginBottom: "8px" }}>Enforce linting and message validation.</li>
+                            <li>Enable automated changelog generation.</li>
+                        </ul>
+                    </div>
+                    <div style={{ padding: "32px", borderRadius: "16px", background: "rgba(255, 255, 255, 0.02)", border: "1px solid var(--border-muted)" }}>
+                        <h4 style={{ color: "var(--text-primary)", fontSize: "1rem", fontWeight: 600, marginBottom: "16px", fontFamily: "var(--font-poppins), sans-serif" }}>Branching Model (Rule 15)</h4>
+                        <p style={{ color: "var(--text-muted)", fontSize: "0.875rem", lineHeight: 1.7, marginBottom: "16px" }}>
+                            A strict hierarchical model to protect production stability and streamline integration.
+                        </p>
+                        <ul style={{ color: "var(--text-faint)", fontSize: "0.8125rem", paddingLeft: "18px", margin: 0 }}>
+                            <li style={{ marginBottom: "8px" }}><strong>main</strong>: Sacred production space.</li>
+                            <li style={{ marginBottom: "8px" }}><strong>dev</strong>: Heart of integration & testing.</li>
+                            <li><strong>feature/</strong>: Isolated task development.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h2 style={{
+                    fontSize: "1.5rem",
+                    fontWeight: 600,
+                    marginBottom: "32px",
+                    color: "var(--text-primary)",
+                    fontFamily: "var(--font-poppins), sans-serif",
+                }}>
                     Layer Responsibilities
                 </h2>
                 <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: "24px" }}>
