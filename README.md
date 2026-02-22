@@ -1,36 +1,45 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Core-Line Architecture Website
+
+The official website and documentation portal for the Core-Line (CL) Architecture standard.
+
+## Overview
+
+This project serves as the primary landing page and documentation hub for the Core-Line Architecture standard. It provides a visual and interactive guide for engineering teams to understand the Core-Line philosophy, implementation rules, and CLI tooling.
+
+- **Standard**: [coreline-architecture/standard](https://github.com/coreline-architecture/standard)
+- **Organization**: [github.com/coreline-architecture](https://github.com/coreline-architecture)
+
+## Tech Stack
+
+- **Framework**: Next.js (App Router)
+- **Styling**: Vanilla CSS / Inline Styles
+- **Animations**: Framer Motion
+- **Language**: TypeScript
 
 ## Getting Started
 
-First, run the development server:
+### Installation
+
+```bash
+npm install
+```
+
+### Development
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The site will be available at `http://localhost:3000`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Architecture Rules
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+The website repository itself adheres to the architectural standards it documents:
 
-## Learn More
+1. **Atomic Commits**: Every change is committed as a single logical unit.
+2. **Standardized Branching**: Hierarchical model using `main`, `dev`, and `feature/` branches.
+3. **Linear Flow**: Strict request/data lifecycle.
 
-To learn more about Next.js, take a look at the following resources:
+## License
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This project is part of the Core-Line Architecture ecosystem.
